@@ -1,0 +1,7 @@
+  s.subspec 'MGR{{wingName}}' do |{{firstLowCase(wingName)}}|
+    {{firstLowCase(wingName)}}.source_files = 'MGRenterApiWings/MGR{{wingName}}/**/*{.swift}'
+    {{firstLowCase(wingName)}}.resources = ['MGRenterApiWings/MGR{{wingName}}/*.plist']
+    {{firstLowCase(wingName)}}.dependency 'MGRenterApiWings/MGServiceWingsProvider'
+  end
+
+end

@@ -1,0 +1,30 @@
+//
+//  MGRUpdateLoginPwd.swift
+//  Pods
+//
+//  +----------------------------------------+
+//  |                                        |
+//  |   Created by MogoAirport. Good luck.   |
+//  |                                        |
+//  +----------------------------------------+
+//
+//
+
+import Foundation
+import RxSwift
+import Result
+import MGBricks
+
+public protocol Will{{wingName}}: MGServiceWingsProvider
+{
+    func {{firstLowCase(wingName)}}({{wingParamsString}}) -> Observable<Result<String, MGAPIError>>
+}
+
+extension Will{{wingName}}
+{
+    public func {{firstLowCase(wingName)}}({{wingParamsString}}) -> Observable<Result<String, MGAPIError>>
+    {
+        let request = {{wingName}}Request({{requestInitString}})
+        return observableRequest(request, withResponseMapping: messageFetcher)
+    }
+}

@@ -1,0 +1,40 @@
+//
+//  UpdatePassword.swift
+//  Pods
+//
+//  +----------------------------------------+
+//  |                                        |
+//  |   Created by MogoAirport. Good luck.   |
+//  |                                        |
+//  +----------------------------------------+
+//
+//
+
+import Foundation
+import SporeNetworking
+import MGBricks
+import Result
+import MogoRenterInfo
+
+public struct {{wingName}}Request: FungiRequest, RequestSpontaneous
+{
+    public init() { }
+
+    public init({{wingParamsString}})
+    {
+         {{{assignProperty}}}
+    }
+
+    {{{requestPropertyList}}}
+
+    public var mockType: MockedType = MockedType.plist("{{wingName}}.plist")
+
+    public var path: String = "{{requestPath}}"
+
+    public typealias Response = MGResponse
+    public var method: HTTPMethod = {{httpMethod}}
+
+    public var contentParameters: [String : Any] {
+        return [{{{paramsContentString}}}]
+    }
+}

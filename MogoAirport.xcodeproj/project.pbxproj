@@ -7,12 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		411E185155708BC3CEEB81ED /* Pods_MogoAirport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06518108CC2E31E8447601FB /* Pods_MogoAirport.framework */; };
+		752DF4051F617DBC004E334E /* subpod.mustache in Resources */ = {isa = PBXBuildFile; fileRef = 752DF4041F617DBC004E334E /* subpod.mustache */; };
+		756BE4411F60DE0B00825123 /* ParamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756BE4401F60DE0B00825123 /* ParamView.swift */; };
+		756BE4431F60DE2700825123 /* ParamView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 756BE4421F60DE2700825123 /* ParamView.xib */; };
+		756BE4451F60DF7500825123 /* ParamEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756BE4441F60DF7500825123 /* ParamEntity.swift */; };
 		758D25F41F5F8ED8003D37B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758D25F31F5F8ED8003D37B7 /* AppDelegate.swift */; };
 		758D25F61F5F8ED8003D37B7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758D25F51F5F8ED8003D37B7 /* ViewController.swift */; };
 		758D25F81F5F8ED8003D37B7 /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758D25F71F5F8ED8003D37B7 /* Document.swift */; };
 		758D25FA1F5F8ED8003D37B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 758D25F91F5F8ED8003D37B7 /* Assets.xcassets */; };
 		758D25FD1F5F8ED8003D37B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 758D25FB1F5F8ED8003D37B7 /* Main.storyboard */; };
 		758D26081F5F8ED8003D37B7 /* MogoAirportTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758D26071F5F8ED8003D37B7 /* MogoAirportTests.swift */; };
+		758D26181F5F8F4C003D37B7 /* BuilderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758D26161F5F8F4C003D37B7 /* BuilderViewController.swift */; };
+		758D261A1F5FC2BD003D37B7 /* BuilderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758D26191F5FC2BD003D37B7 /* BuilderViewModel.swift */; };
+		758D261C1F5FC3D6003D37B7 /* BuilderEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758D261B1F5FC3D6003D37B7 /* BuilderEntity.swift */; };
+		758D261E1F5FE4E1003D37B7 /* FileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758D261D1F5FE4E1003D37B7 /* FileService.swift */; };
+		758D26201F5FF81C003D37B7 /* FileRenderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758D261F1F5FF81C003D37B7 /* FileRenderService.swift */; };
+		758D26221F5FFA76003D37B7 /* document.mustache in Resources */ = {isa = PBXBuildFile; fileRef = 758D26211F5FFA76003D37B7 /* document.mustache */; };
+		758D26241F5FFC68003D37B7 /* wing.mustache in Resources */ = {isa = PBXBuildFile; fileRef = 758D26231F5FFC68003D37B7 /* wing.mustache */; };
+		758D26261F5FFC75003D37B7 /* request.mustache in Resources */ = {isa = PBXBuildFile; fileRef = 758D26251F5FFC75003D37B7 /* request.mustache */; };
+		758D26281F5FFC97003D37B7 /* mockPlist.mustache in Resources */ = {isa = PBXBuildFile; fileRef = 758D26271F5FFC97003D37B7 /* mockPlist.mustache */; };
+		F1EF4578F8284DB8E33FD217 /* Pods_MogoAirportTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCC8D1DEA091E30A4F0AF421 /* Pods_MogoAirportTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +41,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		06518108CC2E31E8447601FB /* Pods_MogoAirport.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MogoAirport.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E55FF66FC5C1F3AD65D6359 /* Pods-MogoAirport.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MogoAirport.release.xcconfig"; path = "Pods/Target Support Files/Pods-MogoAirport/Pods-MogoAirport.release.xcconfig"; sourceTree = "<group>"; };
+		19AA18436F5038EC2DC444D9 /* Pods-MogoAirport.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MogoAirport.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MogoAirport/Pods-MogoAirport.debug.xcconfig"; sourceTree = "<group>"; };
+		752DF4041F617DBC004E334E /* subpod.mustache */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = subpod.mustache; sourceTree = "<group>"; };
+		756BE4401F60DE0B00825123 /* ParamView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParamView.swift; sourceTree = "<group>"; };
+		756BE4421F60DE2700825123 /* ParamView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ParamView.xib; sourceTree = "<group>"; };
+		756BE4441F60DF7500825123 /* ParamEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParamEntity.swift; sourceTree = "<group>"; };
 		758D25F01F5F8ED8003D37B7 /* MogoAirport.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MogoAirport.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		758D25F31F5F8ED8003D37B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		758D25F51F5F8ED8003D37B7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -36,6 +58,18 @@
 		758D26031F5F8ED8003D37B7 /* MogoAirportTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MogoAirportTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		758D26071F5F8ED8003D37B7 /* MogoAirportTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MogoAirportTests.swift; sourceTree = "<group>"; };
 		758D26091F5F8ED8003D37B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		758D26161F5F8F4C003D37B7 /* BuilderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuilderViewController.swift; sourceTree = "<group>"; };
+		758D26191F5FC2BD003D37B7 /* BuilderViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuilderViewModel.swift; sourceTree = "<group>"; };
+		758D261B1F5FC3D6003D37B7 /* BuilderEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuilderEntity.swift; sourceTree = "<group>"; };
+		758D261D1F5FE4E1003D37B7 /* FileService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileService.swift; sourceTree = "<group>"; };
+		758D261F1F5FF81C003D37B7 /* FileRenderService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileRenderService.swift; sourceTree = "<group>"; };
+		758D26211F5FFA76003D37B7 /* document.mustache */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = document.mustache; sourceTree = "<group>"; };
+		758D26231F5FFC68003D37B7 /* wing.mustache */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = wing.mustache; sourceTree = "<group>"; };
+		758D26251F5FFC75003D37B7 /* request.mustache */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = request.mustache; sourceTree = "<group>"; };
+		758D26271F5FFC97003D37B7 /* mockPlist.mustache */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mockPlist.mustache; sourceTree = "<group>"; };
+		B6078594A638CAE1F4B91902 /* Pods-MogoAirportTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MogoAirportTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MogoAirportTests/Pods-MogoAirportTests.debug.xcconfig"; sourceTree = "<group>"; };
+		BCB2C62FD6F7FE3C96E625E5 /* Pods-MogoAirportTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MogoAirportTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MogoAirportTests/Pods-MogoAirportTests.release.xcconfig"; sourceTree = "<group>"; };
+		DCC8D1DEA091E30A4F0AF421 /* Pods_MogoAirportTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MogoAirportTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				411E185155708BC3CEEB81ED /* Pods_MogoAirport.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,18 +85,41 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1EF4578F8284DB8E33FD217 /* Pods_MogoAirportTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4514AD1B6AF8D3B4FC934EC0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				06518108CC2E31E8447601FB /* Pods_MogoAirport.framework */,
+				DCC8D1DEA091E30A4F0AF421 /* Pods_MogoAirportTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5997D9912311453926A318FE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				19AA18436F5038EC2DC444D9 /* Pods-MogoAirport.debug.xcconfig */,
+				0E55FF66FC5C1F3AD65D6359 /* Pods-MogoAirport.release.xcconfig */,
+				B6078594A638CAE1F4B91902 /* Pods-MogoAirportTests.debug.xcconfig */,
+				BCB2C62FD6F7FE3C96E625E5 /* Pods-MogoAirportTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		758D25E71F5F8ED8003D37B7 = {
 			isa = PBXGroup;
 			children = (
 				758D25F21F5F8ED8003D37B7 /* MogoAirport */,
 				758D26061F5F8ED8003D37B7 /* MogoAirportTests */,
 				758D25F11F5F8ED8003D37B7 /* Products */,
+				5997D9912311453926A318FE /* Pods */,
+				4514AD1B6AF8D3B4FC934EC0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,6 +141,7 @@
 				758D25F91F5F8ED8003D37B7 /* Assets.xcassets */,
 				758D25FB1F5F8ED8003D37B7 /* Main.storyboard */,
 				758D25FE1F5F8ED8003D37B7 /* Info.plist */,
+				758D26121F5F8F4C003D37B7 /* RequestBuilder */,
 			);
 			path = MogoAirport;
 			sourceTree = "<group>";
@@ -96,6 +155,58 @@
 			path = MogoAirportTests;
 			sourceTree = "<group>";
 		};
+		758D26121F5F8F4C003D37B7 /* RequestBuilder */ = {
+			isa = PBXGroup;
+			children = (
+				758D26131F5F8F4C003D37B7 /* Model */,
+				758D26141F5F8F4C003D37B7 /* Services */,
+				758D26151F5F8F4C003D37B7 /* View */,
+				758D26171F5F8F4C003D37B7 /* ViewModel */,
+			);
+			path = RequestBuilder;
+			sourceTree = "<group>";
+		};
+		758D26131F5F8F4C003D37B7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				758D261B1F5FC3D6003D37B7 /* BuilderEntity.swift */,
+				758D26211F5FFA76003D37B7 /* document.mustache */,
+				758D26231F5FFC68003D37B7 /* wing.mustache */,
+				758D26251F5FFC75003D37B7 /* request.mustache */,
+				758D26271F5FFC97003D37B7 /* mockPlist.mustache */,
+				752DF4041F617DBC004E334E /* subpod.mustache */,
+				756BE4441F60DF7500825123 /* ParamEntity.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		758D26141F5F8F4C003D37B7 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				758D261D1F5FE4E1003D37B7 /* FileService.swift */,
+				758D261F1F5FF81C003D37B7 /* FileRenderService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		758D26151F5F8F4C003D37B7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				758D26161F5F8F4C003D37B7 /* BuilderViewController.swift */,
+				756BE4401F60DE0B00825123 /* ParamView.swift */,
+				756BE4421F60DE2700825123 /* ParamView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		758D26171F5F8F4C003D37B7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				758D26191F5FC2BD003D37B7 /* BuilderViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -103,9 +214,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 758D260C1F5F8ED8003D37B7 /* Build configuration list for PBXNativeTarget "MogoAirport" */;
 			buildPhases = (
+				A2D55FA54BB02F83AA3B9B0D /* [CP] Check Pods Manifest.lock */,
 				758D25EC1F5F8ED8003D37B7 /* Sources */,
 				758D25ED1F5F8ED8003D37B7 /* Frameworks */,
 				758D25EE1F5F8ED8003D37B7 /* Resources */,
+				DBC25DEE99738DEBDF701D8A /* [CP] Embed Pods Frameworks */,
+				6E19BD5FDD7AD95D832E416B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -120,9 +234,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 758D260F1F5F8ED8003D37B7 /* Build configuration list for PBXNativeTarget "MogoAirportTests" */;
 			buildPhases = (
+				051A3C9554A4B55985947892 /* [CP] Check Pods Manifest.lock */,
 				758D25FF1F5F8ED8003D37B7 /* Sources */,
 				758D26001F5F8ED8003D37B7 /* Frameworks */,
 				758D26011F5F8ED8003D37B7 /* Resources */,
+				C9B5B0684CB1A51113300158 /* [CP] Embed Pods Frameworks */,
+				374FB54CB28892F518C490EA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -181,7 +298,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				756BE4431F60DE2700825123 /* ParamView.xib in Resources */,
+				758D26261F5FFC75003D37B7 /* request.mustache in Resources */,
+				758D26221F5FFA76003D37B7 /* document.mustache in Resources */,
 				758D25FA1F5F8ED8003D37B7 /* Assets.xcassets in Resources */,
+				752DF4051F617DBC004E334E /* subpod.mustache in Resources */,
+				758D26241F5FFC68003D37B7 /* wing.mustache in Resources */,
+				758D26281F5FFC97003D37B7 /* mockPlist.mustache in Resources */,
 				758D25FD1F5F8ED8003D37B7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -195,14 +318,136 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		051A3C9554A4B55985947892 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MogoAirportTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		374FB54CB28892F518C490EA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MogoAirportTests/Pods-MogoAirportTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6E19BD5FDD7AD95D832E416B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MogoAirport/Pods-MogoAirport-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A2D55FA54BB02F83AA3B9B0D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MogoAirport-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C9B5B0684CB1A51113300158 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MogoAirportTests/Pods-MogoAirportTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
+				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MogoAirportTests/Pods-MogoAirportTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DBC25DEE99738DEBDF701D8A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MogoAirport/Pods-MogoAirport-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GRMustache.swift/Mustache.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Mustache.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MogoAirport/Pods-MogoAirport-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		758D25EC1F5F8ED8003D37B7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				758D261A1F5FC2BD003D37B7 /* BuilderViewModel.swift in Sources */,
+				758D261E1F5FE4E1003D37B7 /* FileService.swift in Sources */,
+				758D26181F5F8F4C003D37B7 /* BuilderViewController.swift in Sources */,
+				756BE4411F60DE0B00825123 /* ParamView.swift in Sources */,
 				758D25F61F5F8ED8003D37B7 /* ViewController.swift in Sources */,
 				758D25F41F5F8ED8003D37B7 /* AppDelegate.swift in Sources */,
+				756BE4451F60DF7500825123 /* ParamEntity.swift in Sources */,
 				758D25F81F5F8ED8003D37B7 /* Document.swift in Sources */,
+				758D261C1F5FC3D6003D37B7 /* BuilderEntity.swift in Sources */,
+				758D26201F5FF81C003D37B7 /* FileRenderService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,6 +575,7 @@
 		};
 		758D260D1F5F8ED8003D37B7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 19AA18436F5038EC2DC444D9 /* Pods-MogoAirport.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -344,6 +590,7 @@
 		};
 		758D260E1F5F8ED8003D37B7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E55FF66FC5C1F3AD65D6359 /* Pods-MogoAirport.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -358,6 +605,7 @@
 		};
 		758D26101F5F8ED8003D37B7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B6078594A638CAE1F4B91902 /* Pods-MogoAirportTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -374,6 +622,7 @@
 		};
 		758D26111F5F8ED8003D37B7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BCB2C62FD6F7FE3C96E625E5 /* Pods-MogoAirportTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -407,6 +656,7 @@
 				758D260E1F5F8ED8003D37B7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		758D260F1F5F8ED8003D37B7 /* Build configuration list for PBXNativeTarget "MogoAirportTests" */ = {
 			isa = XCConfigurationList;
@@ -415,6 +665,7 @@
 				758D26111F5F8ED8003D37B7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

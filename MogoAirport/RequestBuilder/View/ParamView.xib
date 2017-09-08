@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12121"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner"/>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="c22-O7-iKe" customClass="ParamView" customModule="MogoAirport" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="480" height="54"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lK0-VY-hGS">
+                    <rect key="frame" x="53" y="16" width="299" height="22"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="22" id="tJT-BS-c7m"/>
+                    </constraints>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" bezelStyle="round" id="pvU-zv-p2Z">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="qn7-MH-gB6">
+                    <rect key="frame" x="358" y="14" width="105" height="26"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="K1K-aY-IFT"/>
+                        <constraint firstAttribute="height" constant="21" id="TAt-fB-ADu"/>
+                    </constraints>
+                    <popUpButtonCell key="cell" type="push" title="Int" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="RA5-Gu-pid" id="nbD-lb-pDY">
+                        <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="menu"/>
+                        <menu key="menu" id="O8n-7k-nOZ">
+                            <items>
+                                <menuItem title="Int" state="on" id="RA5-Gu-pid"/>
+                                <menuItem title="String" id="4Qj-UH-JQF"/>
+                                <menuItem title="Dictionary" id="9Yc-Su-knZ"/>
+                            </items>
+                        </menu>
+                    </popUpButtonCell>
+                    <connections>
+                        <action selector="typeChangedAction:" target="c22-O7-iKe" id="2Fc-kg-qhw"/>
+                    </connections>
+                </popUpButton>
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="msM-ma-A0u">
+                    <rect key="frame" x="-6" y="10" width="57" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="45" id="lBj-tC-nEY"/>
+                        <constraint firstAttribute="height" constant="21" id="vhp-fV-VYz"/>
+                    </constraints>
+                    <buttonCell key="cell" type="push" title="❌" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="uqV-ln-fNE">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" size="8" name="AppleColorEmoji"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="closeButtonAction:" target="c22-O7-iKe" id="6eK-Pb-EOC"/>
+                    </connections>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstItem="qn7-MH-gB6" firstAttribute="leading" secondItem="lK0-VY-hGS" secondAttribute="trailing" constant="8" id="00b-fU-U5r"/>
+                <constraint firstItem="lK0-VY-hGS" firstAttribute="leading" secondItem="msM-ma-A0u" secondAttribute="trailing" constant="8" id="8l7-Ix-Lze"/>
+                <constraint firstItem="msM-ma-A0u" firstAttribute="centerY" secondItem="c22-O7-iKe" secondAttribute="centerY" id="GrB-Kr-xvd"/>
+                <constraint firstItem="lK0-VY-hGS" firstAttribute="centerY" secondItem="c22-O7-iKe" secondAttribute="centerY" id="nLf-97-7a2"/>
+                <constraint firstItem="qn7-MH-gB6" firstAttribute="centerY" secondItem="c22-O7-iKe" secondAttribute="centerY" id="o5O-nW-Iyl"/>
+                <constraint firstAttribute="trailing" secondItem="qn7-MH-gB6" secondAttribute="trailing" constant="20" id="op7-TP-6s0"/>
+                <constraint firstItem="msM-ma-A0u" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" id="rt7-0H-gce"/>
+            </constraints>
+            <connections>
+                <outlet property="deleteButtonAction" destination="lK0-VY-hGS" id="bl1-SX-6xf"/>
+                <outlet property="nameTextField" destination="lK0-VY-hGS" id="dFC-o9-d9s"/>
+                <outlet property="typePopUp" destination="qn7-MH-gB6" id="mMp-do-Mk0"/>
+            </connections>
+            <point key="canvasLocation" x="139" y="39"/>
+        </customView>
+    </objects>
+</document>
