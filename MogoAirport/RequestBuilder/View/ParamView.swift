@@ -9,17 +9,15 @@
 import Cocoa
 import RxSwift
 
-class ParamView: NSView
-{
+class ParamView: NSView {
+    
     var paramEntity = ParamEntity(name: "param", type: .intType)
     
-    required init?(coder: NSCoder)
-    {
+    required init?(coder: NSCoder) {
         super.init(coder: coder)
     }
     
-    deinit
-    {
+    deinit {
         NSLog("ParamView deinit")
     }
     
@@ -33,35 +31,30 @@ class ParamView: NSView
     }
     @IBOutlet weak var typePopUp: NSPopUpButton!
     
-    override func awakeFromNib()
-    {
+    override func awakeFromNib() {
         nameTextField.stringValue = paramEntity.name
         typePopUp.selectItem(at: convertTypeToIndex())
     }
     
-    @IBAction func typeChangedAction(_ sender: NSPopUpButton)
-    {
+    @IBAction func typeChangedAction(_ sender: NSPopUpButton) {
         paramEntity.type = convertStringToType()
     }
     
-    @IBAction func closeButtonAction(_ sender: Any)
-    {
+    @IBAction func closeButtonAction(_ sender: Any) {
         closeSubject.onNext(())
     }
 }
 
 // MARK: Delegate
-extension ParamView: NSTextFieldDelegate
-{
-    override func controlTextDidChange(_ obj: Notification)
-    {
+extension ParamView: NSTextFieldDelegate {
+    override func controlTextDidChange(_ obj: Notification) {
         paramEntity.name = nameTextField.stringValue
     }
 }
 
 // MARK: Method Private
-extension ParamView
-{
+extension ParamView {
+    
     func convertStringToType() -> ParamType {
         guard let typeStr = typePopUp.selectedItem?.title else {
             fatalError("")
@@ -73,6 +66,8 @@ extension ParamView
             return ParamType.stringType
         case "Dictionary":
             return ParamType.dictionaryType
+        case "Array":
+            return ParamType.arrayType
         default:
             return ParamType.intType
         }
@@ -86,6 +81,8 @@ extension ParamView
             return 1
         case .dictionaryType:
             return 2
+        case .arrayType:
+            return 3
         }
     }
 }

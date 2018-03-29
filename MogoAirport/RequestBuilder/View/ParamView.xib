@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="13771" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12121"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13771"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -13,7 +13,7 @@
             <rect key="frame" x="0.0" y="0.0" width="480" height="54"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
-                <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lK0-VY-hGS">
+                <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="lK0-VY-hGS">
                     <rect key="frame" x="53" y="16" width="299" height="22"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="22" id="tJT-BS-c7m"/>
@@ -30,14 +30,15 @@
                         <constraint firstAttribute="width" constant="100" id="K1K-aY-IFT"/>
                         <constraint firstAttribute="height" constant="21" id="TAt-fB-ADu"/>
                     </constraints>
-                    <popUpButtonCell key="cell" type="push" title="Int" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="RA5-Gu-pid" id="nbD-lb-pDY">
+                    <popUpButtonCell key="cell" type="push" title="Int" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="zMa-uC-9Tb" id="nbD-lb-pDY">
                         <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="menu"/>
                         <menu key="menu" id="O8n-7k-nOZ">
                             <items>
-                                <menuItem title="Int" state="on" id="RA5-Gu-pid"/>
+                                <menuItem title="Int" state="on" id="zMa-uC-9Tb"/>
                                 <menuItem title="String" id="4Qj-UH-JQF"/>
                                 <menuItem title="Dictionary" id="9Yc-Su-knZ"/>
+                                <menuItem title="Array" id="RA5-Gu-pid"/>
                             </items>
                         </menu>
                     </popUpButtonCell>
@@ -74,7 +75,7 @@
                 <outlet property="nameTextField" destination="lK0-VY-hGS" id="dFC-o9-d9s"/>
                 <outlet property="typePopUp" destination="qn7-MH-gB6" id="mMp-do-Mk0"/>
             </connections>
-            <point key="canvasLocation" x="139" y="39"/>
+            <point key="canvasLocation" x="38" y="-23"/>
         </customView>
     </objects>
 </document>

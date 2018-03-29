@@ -14,17 +14,18 @@ import Foundation
 import RxSwift
 import Result
 import MGBricks
+import MGWingsCenter
 
 public protocol Will{{wingName}}: MGServiceWingsProvider
 {
-    func {{firstLowCase(wingName)}}({{wingParamsString}}) -> Observable<Result<String, MGAPIError>>
+    func {{firstLowCase(wingName)}}({{wingParamsString}}) -> Observable<Result<{{{resultSuccessType}}}, MGAPIError>>
 }
 
 extension Will{{wingName}}
 {
-    public func {{firstLowCase(wingName)}}({{wingParamsString}}) -> Observable<Result<String, MGAPIError>>
+    public func {{firstLowCase(wingName)}}({{wingParamsString}}) -> Observable<Result<{{{resultSuccessType}}}, MGAPIError>>
     {
         let request = {{wingName}}Request({{requestInitString}})
-        return observableRequest(request, withResponseMapping: messageFetcher)
+        return observableRequest(request, withResponseMapping: {{responseFetcher}})
     }
 }

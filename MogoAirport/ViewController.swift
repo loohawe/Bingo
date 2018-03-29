@@ -7,6 +7,7 @@
 //
 
 import Cocoa
+import ITProgressBar
 
 class ViewController: NSViewController {
 

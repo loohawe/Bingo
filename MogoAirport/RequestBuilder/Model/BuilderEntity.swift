@@ -9,8 +9,6 @@
 import Foundation
 import RxSwift
 
-fileprivate let wingsGroupFolderName = "MGRenterApiWings"
-
 let const_key_wingName = "wingName"
 let const_key_requestPath = "requestPath"
 let const_key_httpMethod = "httpMethod"
@@ -19,16 +17,33 @@ let const_key_requestInitString = "requestInitString"
 let const_key_requestPropertyList = "requestPropertyList"
 let const_key_assignProperty = "assignProperty"
 let const_key_paramsContentString = "paramsContentString"
+let const_key_requestType = "requestType"
+let const_key_responseFetcher = "responseFetcher"
+let const_key_resultSuccessType = "resultSuccessType"
 
 let const_file_wing = "wing"
 let const_file_request = "request"
 let const_file_mockPlist = "mockPlist"
 let const_file_subpod = "subpod"
 
-enum HttpMethod {
+fileprivate let wingsGroupFolderName = "MGRenterApiWings"//"MGPartnerApiWings"
+
+let const_fetcher_content = "contentFetcher"
+let const_fetcher_message = "messageFetcher"
+let const_fetcher_messageAndContent = "messageAndContentFercher"
+
+enum HttpMethod
+{
     case post
     case get
 }
+
+enum RequestType
+{
+    case fungi
+    case mogo
+}
+
 
 class BuilderEntity
 {
@@ -45,11 +60,35 @@ class BuilderEntity
     var hatName = ""
     var method = HttpMethod.post
     var path = ""
+    
     var wingParamsString: String = ""
     var requestInitString: String = ""
     var requestPropertyDes: String = ""
     var assignProperty: String = ""
     var paramsContentString: String = ":"
+    
+    var requestType = RequestType.fungi
+    var requestTypeDes: String {
+        switch requestType {
+        case .fungi:
+            return "FungiRequest"
+        case .mogo:
+            return "MogoRequest"
+        }
+    }
+    var responseFetcher = const_fetcher_content
+    var resultSuccessTypeDes: String {
+        switch responseFetcher {
+        case const_fetcher_content:
+            return "[String : Any]"
+        case const_fetcher_message:
+            return "String"
+        case const_fetcher_messageAndContent:
+            return "(String, [String : Any])"
+        default:
+            return "<#Unrecognize Type#>"
+        }
+    }
     
     var locSubject = PublishSubject<URL>()
     
@@ -85,6 +124,10 @@ class BuilderEntity
         return wingFolder.appendingPathComponent(wingPlistName).appendingPathExtension("plist").path
     }
     
+    var podspecFilePath: URL {
+        return projectLoc.appendingPathComponent("\(wingsGroupFolderName).podspec")
+    }
+    
     func buildRenderMapping() -> [String : Any]
     {
         var map: [String : Any] = [
@@ -107,6 +150,9 @@ class BuilderEntity
         
         map[const_key_requestInitString] = requestInitString
         map[const_key_paramsContentString] = paramsContentString
+        map[const_key_requestType] = requestTypeDes
+        map[const_key_responseFetcher] = responseFetcher
+        map[const_key_resultSuccessType] = resultSuccessTypeDes
         
         return map
     }

@@ -8,10 +8,31 @@
 
 /* Begin PBXBuildFile section */
 		411E185155708BC3CEEB81ED /* Pods_MogoAirport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06518108CC2E31E8447601FB /* Pods_MogoAirport.framework */; };
+		750B2A5C1F65086B0057574A /* Bingo_icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 750B2A5B1F65086B0057574A /* Bingo_icon.icns */; };
+		7516C25D2067C20400A82A7A /* ElementFactoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7516C25C2067C20400A82A7A /* ElementFactoryViewModel.swift */; };
+		7516C2622068822900A82A7A /* ElementViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7516C2612068822900A82A7A /* ElementViewModelProtocol.swift */; };
+		7516C2642068842300A82A7A /* ChooseFileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7516C2632068842300A82A7A /* ChooseFileViewModel.swift */; };
+		7516C2662069351700A82A7A /* ListSelectedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7516C2652069351600A82A7A /* ListSelectedView.swift */; };
+		7516C2682069352700A82A7A /* ListSelectedView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7516C2672069352700A82A7A /* ListSelectedView.xib */; };
 		752DF4051F617DBC004E334E /* subpod.mustache in Resources */ = {isa = PBXBuildFile; fileRef = 752DF4041F617DBC004E334E /* subpod.mustache */; };
+		7538CF351F639A59005F58D5 /* ViewEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7538CF341F639A59005F58D5 /* ViewEvent.swift */; };
+		753AFCEF20634F21001CB5B4 /* BGClipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753AFCEA20634F21001CB5B4 /* BGClipView.swift */; };
+		753AFCF020634F21001CB5B4 /* BGView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753AFCEB20634F21001CB5B4 /* BGView.swift */; };
+		753AFCF120634F21001CB5B4 /* ChooseFileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 753AFCED20634F21001CB5B4 /* ChooseFileView.xib */; };
+		753AFCF220634F21001CB5B4 /* ChooseFileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753AFCEE20634F21001CB5B4 /* ChooseFileView.swift */; };
+		753AFCF420634F53001CB5B4 /* BGScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753AFCF320634F53001CB5B4 /* BGScrollView.swift */; };
+		753AFCFC20637F41001CB5B4 /* NSObjectDispose.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753AFCFB20637F41001CB5B4 /* NSObjectDispose.swift */; };
+		753AFD0420638284001CB5B4 /* YamlLoadedService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753AFCFE20638284001CB5B4 /* YamlLoadedService.swift */; };
+		753AFD0520638284001CB5B4 /* AlertService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753AFCFF20638284001CB5B4 /* AlertService.swift */; };
+		753AFD0620638284001CB5B4 /* OpenPanelService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753AFD0020638284001CB5B4 /* OpenPanelService.swift */; };
+		753AFD0720638284001CB5B4 /* XibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753AFD0120638284001CB5B4 /* XibLoadable.swift */; };
+		753AFD0820638284001CB5B4 /* StoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753AFD0220638284001CB5B4 /* StoreService.swift */; };
+		753AFD0920638284001CB5B4 /* BingoFileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753AFD0320638284001CB5B4 /* BingoFileService.swift */; };
+		753AFD0B20638436001CB5B4 /* YamlDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753AFD0A20638436001CB5B4 /* YamlDataService.swift */; };
 		756BE4411F60DE0B00825123 /* ParamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756BE4401F60DE0B00825123 /* ParamView.swift */; };
 		756BE4431F60DE2700825123 /* ParamView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 756BE4421F60DE2700825123 /* ParamView.xib */; };
 		756BE4451F60DF7500825123 /* ParamEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756BE4441F60DF7500825123 /* ParamEntity.swift */; };
+		7580C9F7206D37F200738616 /* ListSelectedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7580C9F6206D37F200738616 /* ListSelectedViewModel.swift */; };
 		758D25F41F5F8ED8003D37B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758D25F31F5F8ED8003D37B7 /* AppDelegate.swift */; };
 		758D25F61F5F8ED8003D37B7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758D25F51F5F8ED8003D37B7 /* ViewController.swift */; };
 		758D25F81F5F8ED8003D37B7 /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758D25F71F5F8ED8003D37B7 /* Document.swift */; };
@@ -27,6 +48,8 @@
 		758D26241F5FFC68003D37B7 /* wing.mustache in Resources */ = {isa = PBXBuildFile; fileRef = 758D26231F5FFC68003D37B7 /* wing.mustache */; };
 		758D26261F5FFC75003D37B7 /* request.mustache in Resources */ = {isa = PBXBuildFile; fileRef = 758D26251F5FFC75003D37B7 /* request.mustache */; };
 		758D26281F5FFC97003D37B7 /* mockPlist.mustache in Resources */ = {isa = PBXBuildFile; fileRef = 758D26271F5FFC97003D37B7 /* mockPlist.mustache */; };
+		75A94BFD2060DD0100A6B814 /* MainCanvasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A94BFC2060DD0100A6B814 /* MainCanvasViewController.swift */; };
+		75A94C012060ED8C00A6B814 /* LoadingConfigViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A94C002060ED8C00A6B814 /* LoadingConfigViewController.swift */; };
 		F1EF4578F8284DB8E33FD217 /* Pods_MogoAirportTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCC8D1DEA091E30A4F0AF421 /* Pods_MogoAirportTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -44,10 +67,32 @@
 		06518108CC2E31E8447601FB /* Pods_MogoAirport.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MogoAirport.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E55FF66FC5C1F3AD65D6359 /* Pods-MogoAirport.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MogoAirport.release.xcconfig"; path = "Pods/Target Support Files/Pods-MogoAirport/Pods-MogoAirport.release.xcconfig"; sourceTree = "<group>"; };
 		19AA18436F5038EC2DC444D9 /* Pods-MogoAirport.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MogoAirport.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MogoAirport/Pods-MogoAirport.debug.xcconfig"; sourceTree = "<group>"; };
+		750B2A5B1F65086B0057574A /* Bingo_icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Bingo_icon.icns; sourceTree = "<group>"; };
+		7516C25C2067C20400A82A7A /* ElementFactoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementFactoryViewModel.swift; sourceTree = "<group>"; };
+		7516C2612068822900A82A7A /* ElementViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElementViewModelProtocol.swift; sourceTree = "<group>"; };
+		7516C2632068842300A82A7A /* ChooseFileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseFileViewModel.swift; sourceTree = "<group>"; };
+		7516C2652069351600A82A7A /* ListSelectedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSelectedView.swift; sourceTree = "<group>"; };
+		7516C2672069352700A82A7A /* ListSelectedView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListSelectedView.xib; sourceTree = "<group>"; };
 		752DF4041F617DBC004E334E /* subpod.mustache */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = subpod.mustache; sourceTree = "<group>"; };
+		7538CF341F639A59005F58D5 /* ViewEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewEvent.swift; sourceTree = "<group>"; };
+		7538CF361F63BA2C005F58D5 /* MogoAirport-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MogoAirport-Bridging-Header.h"; sourceTree = "<group>"; };
+		753AFCEA20634F21001CB5B4 /* BGClipView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BGClipView.swift; sourceTree = "<group>"; };
+		753AFCEB20634F21001CB5B4 /* BGView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BGView.swift; sourceTree = "<group>"; };
+		753AFCED20634F21001CB5B4 /* ChooseFileView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChooseFileView.xib; sourceTree = "<group>"; };
+		753AFCEE20634F21001CB5B4 /* ChooseFileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseFileView.swift; sourceTree = "<group>"; };
+		753AFCF320634F53001CB5B4 /* BGScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BGScrollView.swift; sourceTree = "<group>"; };
+		753AFCFB20637F41001CB5B4 /* NSObjectDispose.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObjectDispose.swift; sourceTree = "<group>"; };
+		753AFCFE20638284001CB5B4 /* YamlLoadedService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YamlLoadedService.swift; sourceTree = "<group>"; };
+		753AFCFF20638284001CB5B4 /* AlertService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertService.swift; sourceTree = "<group>"; };
+		753AFD0020638284001CB5B4 /* OpenPanelService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenPanelService.swift; sourceTree = "<group>"; };
+		753AFD0120638284001CB5B4 /* XibLoadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XibLoadable.swift; sourceTree = "<group>"; };
+		753AFD0220638284001CB5B4 /* StoreService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreService.swift; sourceTree = "<group>"; };
+		753AFD0320638284001CB5B4 /* BingoFileService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BingoFileService.swift; sourceTree = "<group>"; };
+		753AFD0A20638436001CB5B4 /* YamlDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YamlDataService.swift; sourceTree = "<group>"; };
 		756BE4401F60DE0B00825123 /* ParamView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParamView.swift; sourceTree = "<group>"; };
 		756BE4421F60DE2700825123 /* ParamView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ParamView.xib; sourceTree = "<group>"; };
 		756BE4441F60DF7500825123 /* ParamEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParamEntity.swift; sourceTree = "<group>"; };
+		7580C9F6206D37F200738616 /* ListSelectedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSelectedViewModel.swift; sourceTree = "<group>"; };
 		758D25F01F5F8ED8003D37B7 /* MogoAirport.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MogoAirport.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		758D25F31F5F8ED8003D37B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		758D25F51F5F8ED8003D37B7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -67,6 +112,8 @@
 		758D26231F5FFC68003D37B7 /* wing.mustache */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = wing.mustache; sourceTree = "<group>"; };
 		758D26251F5FFC75003D37B7 /* request.mustache */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = request.mustache; sourceTree = "<group>"; };
 		758D26271F5FFC97003D37B7 /* mockPlist.mustache */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mockPlist.mustache; sourceTree = "<group>"; };
+		75A94BFC2060DD0100A6B814 /* MainCanvasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCanvasViewController.swift; sourceTree = "<group>"; };
+		75A94C002060ED8C00A6B814 /* LoadingConfigViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingConfigViewController.swift; sourceTree = "<group>"; };
 		B6078594A638CAE1F4B91902 /* Pods-MogoAirportTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MogoAirportTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MogoAirportTests/Pods-MogoAirportTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BCB2C62FD6F7FE3C96E625E5 /* Pods-MogoAirportTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MogoAirportTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MogoAirportTests/Pods-MogoAirportTests.release.xcconfig"; sourceTree = "<group>"; };
 		DCC8D1DEA091E30A4F0AF421 /* Pods_MogoAirportTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MogoAirportTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -112,6 +159,73 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		7516C2602068822900A82A7A /* Element */ = {
+			isa = PBXGroup;
+			children = (
+				7516C2612068822900A82A7A /* ElementViewModelProtocol.swift */,
+				7516C2632068842300A82A7A /* ChooseFileViewModel.swift */,
+				7580C9F6206D37F200738616 /* ListSelectedViewModel.swift */,
+			);
+			path = Element;
+			sourceTree = "<group>";
+		};
+		7538CF331F639A3C005F58D5 /* ViewUtility */ = {
+			isa = PBXGroup;
+			children = (
+				7538CF341F639A59005F58D5 /* ViewEvent.swift */,
+			);
+			path = ViewUtility;
+			sourceTree = "<group>";
+		};
+		753AFCE920634F21001CB5B4 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				753AFCEA20634F21001CB5B4 /* BGClipView.swift */,
+				753AFCEB20634F21001CB5B4 /* BGView.swift */,
+				753AFCF320634F53001CB5B4 /* BGScrollView.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		753AFCEC20634F21001CB5B4 /* Element */ = {
+			isa = PBXGroup;
+			children = (
+				753AFCED20634F21001CB5B4 /* ChooseFileView.xib */,
+				753AFCEE20634F21001CB5B4 /* ChooseFileView.swift */,
+				7516C2652069351600A82A7A /* ListSelectedView.swift */,
+				7516C2672069352700A82A7A /* ListSelectedView.xib */,
+			);
+			path = Element;
+			sourceTree = "<group>";
+		};
+		753AFCF520634F69001CB5B4 /* Element */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Element;
+			sourceTree = "<group>";
+		};
+		753AFCFA20637EDE001CB5B4 /* Reactive */ = {
+			isa = PBXGroup;
+			children = (
+				753AFCFB20637F41001CB5B4 /* NSObjectDispose.swift */,
+			);
+			path = Reactive;
+			sourceTree = "<group>";
+		};
+		753AFCFD20638284001CB5B4 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				753AFCFE20638284001CB5B4 /* YamlLoadedService.swift */,
+				753AFCFF20638284001CB5B4 /* AlertService.swift */,
+				753AFD0020638284001CB5B4 /* OpenPanelService.swift */,
+				753AFD0120638284001CB5B4 /* XibLoadable.swift */,
+				753AFD0220638284001CB5B4 /* StoreService.swift */,
+				753AFD0320638284001CB5B4 /* BingoFileService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		758D25E71F5F8ED8003D37B7 = {
 			isa = PBXGroup;
 			children = (
@@ -139,9 +253,15 @@
 				758D25F51F5F8ED8003D37B7 /* ViewController.swift */,
 				758D25F71F5F8ED8003D37B7 /* Document.swift */,
 				758D25F91F5F8ED8003D37B7 /* Assets.xcassets */,
+				750B2A5B1F65086B0057574A /* Bingo_icon.icns */,
 				758D25FB1F5F8ED8003D37B7 /* Main.storyboard */,
 				758D25FE1F5F8ED8003D37B7 /* Info.plist */,
+				753AFCFD20638284001CB5B4 /* Services */,
 				758D26121F5F8F4C003D37B7 /* RequestBuilder */,
+				75A94C042060FDB900A6B814 /* Modules */,
+				7538CF331F639A3C005F58D5 /* ViewUtility */,
+				753AFCFA20637EDE001CB5B4 /* Reactive */,
+				7538CF361F63BA2C005F58D5 /* MogoAirport-Bridging-Header.h */,
 			);
 			path = MogoAirport;
 			sourceTree = "<group>";
@@ -169,6 +289,7 @@
 		758D26131F5F8F4C003D37B7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				753AFCF520634F69001CB5B4 /* Element */,
 				758D261B1F5FC3D6003D37B7 /* BuilderEntity.swift */,
 				758D26211F5FFA76003D37B7 /* document.mustache */,
 				758D26231F5FFC68003D37B7 /* wing.mustache */,
@@ -185,6 +306,7 @@
 			children = (
 				758D261D1F5FE4E1003D37B7 /* FileService.swift */,
 				758D261F1F5FF81C003D37B7 /* FileRenderService.swift */,
+				753AFD0A20638436001CB5B4 /* YamlDataService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -192,6 +314,10 @@
 		758D26151F5F8F4C003D37B7 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				753AFCE920634F21001CB5B4 /* Base */,
+				753AFCEC20634F21001CB5B4 /* Element */,
+				75A94C002060ED8C00A6B814 /* LoadingConfigViewController.swift */,
+				75A94BFC2060DD0100A6B814 /* MainCanvasViewController.swift */,
 				758D26161F5F8F4C003D37B7 /* BuilderViewController.swift */,
 				756BE4401F60DE0B00825123 /* ParamView.swift */,
 				756BE4421F60DE2700825123 /* ParamView.xib */,
@@ -203,8 +329,17 @@
 			isa = PBXGroup;
 			children = (
 				758D26191F5FC2BD003D37B7 /* BuilderViewModel.swift */,
+				7516C25C2067C20400A82A7A /* ElementFactoryViewModel.swift */,
+				7516C2602068822900A82A7A /* Element */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		75A94C042060FDB900A6B814 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Modules;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,6 +399,7 @@
 					758D25EF1F5F8ED8003D37B7 = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = RU85R33KSG;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 					758D26021F5F8ED8003D37B7 = {
@@ -299,11 +435,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				756BE4431F60DE2700825123 /* ParamView.xib in Resources */,
+				750B2A5C1F65086B0057574A /* Bingo_icon.icns in Resources */,
 				758D26261F5FFC75003D37B7 /* request.mustache in Resources */,
+				7516C2682069352700A82A7A /* ListSelectedView.xib in Resources */,
 				758D26221F5FFA76003D37B7 /* document.mustache in Resources */,
 				758D25FA1F5F8ED8003D37B7 /* Assets.xcassets in Resources */,
 				752DF4051F617DBC004E334E /* subpod.mustache in Resources */,
 				758D26241F5FFC68003D37B7 /* wing.mustache in Resources */,
+				753AFCF120634F21001CB5B4 /* ChooseFileView.xib in Resources */,
 				758D26281F5FFC97003D37B7 /* mockPlist.mustache in Resources */,
 				758D25FD1F5F8ED8003D37B7 /* Main.storyboard in Resources */,
 			);
@@ -413,18 +552,28 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-MogoAirport/Pods-MogoAirport-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GRMustache.swift/Mustache.framework",
+				"${BUILT_PRODUCTS_DIR}/ITProgressBar/ITProgressBar.framework",
+				"${BUILT_PRODUCTS_DIR}/PathKit/PathKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Stencil/Stencil.framework",
+				"${BUILT_PRODUCTS_DIR}/Yaml/Yaml.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Mustache.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ITProgressBar.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PathKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Stencil.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Yaml.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -438,15 +587,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				753AFD0620638284001CB5B4 /* OpenPanelService.swift in Sources */,
 				758D261A1F5FC2BD003D37B7 /* BuilderViewModel.swift in Sources */,
+				753AFCFC20637F41001CB5B4 /* NSObjectDispose.swift in Sources */,
+				753AFCF420634F53001CB5B4 /* BGScrollView.swift in Sources */,
 				758D261E1F5FE4E1003D37B7 /* FileService.swift in Sources */,
+				7516C2642068842300A82A7A /* ChooseFileViewModel.swift in Sources */,
 				758D26181F5F8F4C003D37B7 /* BuilderViewController.swift in Sources */,
+				7516C25D2067C20400A82A7A /* ElementFactoryViewModel.swift in Sources */,
+				75A94C012060ED8C00A6B814 /* LoadingConfigViewController.swift in Sources */,
+				7516C2662069351700A82A7A /* ListSelectedView.swift in Sources */,
 				756BE4411F60DE0B00825123 /* ParamView.swift in Sources */,
 				758D25F61F5F8ED8003D37B7 /* ViewController.swift in Sources */,
 				758D25F41F5F8ED8003D37B7 /* AppDelegate.swift in Sources */,
+				753AFD0720638284001CB5B4 /* XibLoadable.swift in Sources */,
+				753AFD0820638284001CB5B4 /* StoreService.swift in Sources */,
+				7538CF351F639A59005F58D5 /* ViewEvent.swift in Sources */,
+				75A94BFD2060DD0100A6B814 /* MainCanvasViewController.swift in Sources */,
 				756BE4451F60DF7500825123 /* ParamEntity.swift in Sources */,
+				7516C2622068822900A82A7A /* ElementViewModelProtocol.swift in Sources */,
+				753AFD0520638284001CB5B4 /* AlertService.swift in Sources */,
 				758D25F81F5F8ED8003D37B7 /* Document.swift in Sources */,
+				753AFCEF20634F21001CB5B4 /* BGClipView.swift in Sources */,
+				753AFD0B20638436001CB5B4 /* YamlDataService.swift in Sources */,
+				7580C9F7206D37F200738616 /* ListSelectedViewModel.swift in Sources */,
+				753AFCF220634F21001CB5B4 /* ChooseFileView.swift in Sources */,
+				753AFCF020634F21001CB5B4 /* BGView.swift in Sources */,
 				758D261C1F5FC3D6003D37B7 /* BuilderEntity.swift in Sources */,
+				753AFD0920638284001CB5B4 /* BingoFileService.swift in Sources */,
+				753AFD0420638284001CB5B4 /* YamlLoadedService.swift in Sources */,
 				758D26201F5FF81C003D37B7 /* FileRenderService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -577,14 +746,18 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 19AA18436F5038EC2DC444D9 /* Pods-MogoAirport.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = RU85R33KSG;
 				INFOPLIST_FILE = MogoAirport/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lookoneey.MogoAirport;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_OBJC_BRIDGING_HEADER = "MogoAirport/MogoAirport-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -592,14 +765,17 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0E55FF66FC5C1F3AD65D6359 /* Pods-MogoAirport.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = RU85R33KSG;
 				INFOPLIST_FILE = MogoAirport/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lookoneey.MogoAirport;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_OBJC_BRIDGING_HEADER = "MogoAirport/MogoAirport-Bridging-Header.h";
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};

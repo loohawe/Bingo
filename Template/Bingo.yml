@@ -1,0 +1,90 @@
+- Project: 租客
+  Template:
+    - a.stencil
+    - b.stencil
+    - c.stencil
+  Output: /Users/luhao/Documents/Work/Modules/MogoAirport/Template
+  UI:
+    - Type: SelectFile
+      Key: project_path
+      Value: ~
+      Candidate: ~
+      Name: 工程目录
+
+    - Type: Input
+      Key: hat_name
+      Value: ~
+      Candidate: ~
+      Name: 帽子名称
+
+    - Type: Radio
+      Key: hat_name
+      Value: ~
+      Candidate: 
+        - aRadio
+        - bRadio
+        - cRadio
+        - dRadio
+        - eRadio
+      Name: 帽子名称
+
+    - Type: List
+      Key: hat_name
+      Value: ~
+      Candidate: 
+        - aItem
+        - bItem
+        - cItem
+      Name: 帽子名称
+
+    - Type: Param
+      Key: hat_name
+      Value: ~
+      Candidate: ~
+      Name: 帽子名称
+
+    - Type: Opuput
+      Key: hat_name
+      Value: ~
+      Candidate: ~
+      Name: 帽子名称
+
+
+- Project: 房东
+  Template:
+    - a.stencil
+    - b.stencil
+    - c.stencil
+  Output: /Users/luhao/Documents/Work/Modules/MogoAirport/Template
+  UI:
+    - Type: SelectFile
+      Key: project_path
+      Value: ~
+      Candidate: ~
+      Name: 工程目录
+
+    - Type: Input
+      Key: hat_name
+      Value: ~
+      Candidate: ~
+      Name: 帽子名称
+
+
+- Project: 经纪人
+  Template:
+    - a.stencil
+    - b.stencil
+    - c.stencil
+  Output: /Users/luhao/Documents/Work/Modules/MogoAirport/Template
+  UI:
+    - Type: SelectFile
+      Key: project_path
+      Value: ~
+      Candidate: ~
+      Name: 工程目录
+
+    - Type: Input
+      Key: hat_name
+      Value: ~
+      Candidate: ~
+      Name: 帽子名称

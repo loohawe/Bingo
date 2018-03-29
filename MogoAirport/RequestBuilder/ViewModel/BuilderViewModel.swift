@@ -10,13 +10,14 @@ import Cocoa
 import RxSwift
 
 fileprivate let projectName = "MGRenter_iOS_ApiWings"
+fileprivate let partnerProjectName = "MGPartner_iOS_ApiWings"
 fileprivate let hatNameTextFieldTag = 1000
 fileprivate let pathTextFieldTag = 1001
 
 class BuilderViewModel: NSObject
 {
     // MARK: Property Public
-    var entity: BuilderEntity = BuilderEntity(projectLocation: URL(fileURLWithPath: "/user"))
+    var entity: BuilderEntity
     
     var locSubject: PublishSubject<URL> {
         get {
@@ -24,15 +25,16 @@ class BuilderViewModel: NSObject
         }
     }
     
-    lazy var fileService: FileService = {
-        return FileService(entity: self.entity)
-    }()
-    
-    lazy var fileRender: FileRenderService = {
-        return FileRenderService(entity: self.entity)
-    }()
+    var fileService: FileService
+    var fileRender: FileRenderService
     
     var paramEntityList: () -> [ParamEntity] = { [] }
+    
+    init(entity aEntity: BuilderEntity) {
+        entity = aEntity
+        fileService = FileService(entity: entity)
+        fileRender = FileRenderService(entity: entity)
+    }
 }
 
 // MARK: Delegate
@@ -55,6 +57,12 @@ extension BuilderViewModel: NSTextFieldDelegate
 
 extension BuilderViewModel
 {
+    public func resetEntity(_ aEntity: BuilderEntity) {
+        entity = aEntity
+        fileService.entity = entity
+        fileRender.entity = entity
+    }
+    
     func chooseProject(_ handle: @escaping (Bool, String) -> Void)
     {
         let openPanel = NSOpenPanel()
@@ -65,14 +73,14 @@ extension BuilderViewModel
             [weak openPanel] (result) in
             guard let `openPanel` = openPanel else { return }
             
-            if result == NSFileHandlingPanelOKButton {
+            if result.rawValue == NSFileHandlingPanelOKButton {
                 guard let location = openPanel.url else { return }
                 
-                if location.lastPathComponent != projectName {
-                    handle(false, "")
-                } else {
+                if location.lastPathComponent == projectName || location.lastPathComponent == partnerProjectName {
                     self.entity.projectLoc = location
                     handle(true, location.path)
+                } else {
+                    handle(false, "")
                 }
             }
         }
@@ -124,7 +132,7 @@ extension BuilderViewModel
 
 extension BuilderViewModel
 {
-    func excuteUpdateCommand(show: NSTextField)
+    func excuteUpdateCommand(_ finish: @escaping (String) -> Void)
     {
         DispatchQueue.global(qos: .default).async {
             // Create a Task instance (was NSTask on swift pre 3.0)
@@ -148,10 +156,14 @@ extension BuilderViewModel
             
             // Get the data
             let data = pipe.fileHandleForReading.readDataToEndOfFile()
+            
+            pipe.fileHandleForReading.readInBackgroundAndNotify()
+            
             let output = NSString(data: data, encoding: String.Encoding.utf8.rawValue)
             
             DispatchQueue.main.async {
-                show.stringValue = show.stringValue.appending(output! as String)
+                
+                finish(output! as String)
                 
                 print(output!)
             }
@@ -235,6 +247,8 @@ extension BuilderViewModel
             return "String"
         case .dictionaryType:
             return "[String : Any]"
+        case .arrayType:
+            return "[Any]"
         }
     }
     
@@ -247,6 +261,8 @@ extension BuilderViewModel
             return "\u{0022}\u{0022}"
         case .dictionaryType:
             return "[:]"
+        case .arrayType:
+            return "[]"
         }
     }
     

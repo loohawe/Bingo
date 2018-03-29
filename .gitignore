@@ -1,0 +1,9 @@
+Example/Pods
+Pods
+Podfile.lock
+*.xcworkspace
+libReveal.dylib
+Build
+.idea
+Example/MGWingsCenter.xcodeproj/xcuserdata
+*.DS_Store

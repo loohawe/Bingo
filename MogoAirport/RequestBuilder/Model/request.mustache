@@ -15,8 +15,9 @@ import SporeNetworking
 import MGBricks
 import Result
 import MogoRenterInfo
+import MGWingsCenter
 
-public struct {{wingName}}Request: FungiRequest, RequestSpontaneous
+public struct {{wingName}}Request: {{requestType}}, RequestSpontaneous
 {
     public init() { }
 
@@ -27,7 +28,7 @@ public struct {{wingName}}Request: FungiRequest, RequestSpontaneous
 
     {{{requestPropertyList}}}
 
-    public var mockType: MockedType = MockedType.plist("{{wingName}}.plist")
+    public var mockType: MockedType = MockedType.plist("{{wingName}}")
 
     public var path: String = "{{requestPath}}"
 

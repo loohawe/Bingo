@@ -8,13 +8,11 @@
 
 import Foundation
 
-enum FileError: Error
-{
+enum FileError: Error {
     case alreadyExist
 }
 
-struct FileService
-{
+struct FileService {
     var entity: BuilderEntity
     var fileMgr = FileManager.default
     
@@ -65,7 +63,7 @@ struct FileService
     func addPodSubspec(_ subpod: String) throws
     {
         let addData = subpod.data(using: String.Encoding.utf8, allowLossyConversion: true)!
-        let podspecPath = entity.projectLoc.appendingPathComponent("MGRenterApiWings.podspec")
+        let podspecPath = entity.podspecFilePath
         
         let writeHandle = try FileHandle(forWritingTo: podspecPath)
         

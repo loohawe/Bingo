@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="13771" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13771"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner"/>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="c22-O7-iKe" customClass="ListSelectedView" customModule="MogoAirport" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="480" height="55"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES"/>
+            <subviews>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="VD4-5h-Z6f">
+                    <rect key="frame" x="18" y="19" width="114" height="17"/>
+                    <constraints>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="110" id="QOM-7G-Kl8"/>
+                        <constraint firstAttribute="width" constant="110" id="hnA-kJ-esF"/>
+                        <constraint firstAttribute="height" constant="17" id="yOy-A9-Tfg"/>
+                    </constraints>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Name" id="iNS-O4-Voi">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="maD-dN-Y3Y">
+                    <rect key="frame" x="136" y="14" width="327" height="26"/>
+                    <popUpButtonCell key="cell" type="push" title="Item 1" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="nZP-qR-pc8" id="AFm-jv-Cbj">
+                        <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="menu"/>
+                        <menu key="menu" id="f3O-o4-E4o">
+                            <items>
+                                <menuItem title="Item 1" state="on" id="nZP-qR-pc8"/>
+                                <menuItem title="Item 2" id="6U0-k5-thH"/>
+                                <menuItem title="Item 3" id="mnD-23-I8b"/>
+                            </items>
+                        </menu>
+                    </popUpButtonCell>
+                </popUpButton>
+                <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="4yY-s2-LXV">
+                    <rect key="frame" x="0.0" y="-2" width="480" height="5"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="oND-0L-U1r"/>
+                    </constraints>
+                </box>
+            </subviews>
+            <constraints>
+                <constraint firstItem="maD-dN-Y3Y" firstAttribute="centerY" secondItem="VD4-5h-Z6f" secondAttribute="centerY" id="Ef4-Ph-XVk"/>
+                <constraint firstAttribute="trailing" secondItem="4yY-s2-LXV" secondAttribute="trailing" id="Hqu-PU-hxD"/>
+                <constraint firstItem="VD4-5h-Z6f" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" constant="20" id="Lxv-eD-0yQ"/>
+                <constraint firstItem="4yY-s2-LXV" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" id="ScS-0C-WwE"/>
+                <constraint firstAttribute="trailing" secondItem="maD-dN-Y3Y" secondAttribute="trailing" constant="20" id="fsc-LI-f47"/>
+                <constraint firstItem="VD4-5h-Z6f" firstAttribute="centerY" secondItem="c22-O7-iKe" secondAttribute="centerY" id="sjY-Vc-4yk"/>
+                <constraint firstItem="maD-dN-Y3Y" firstAttribute="leading" secondItem="VD4-5h-Z6f" secondAttribute="trailing" constant="8" id="uIR-7o-aSK"/>
+                <constraint firstAttribute="bottom" secondItem="4yY-s2-LXV" secondAttribute="bottom" id="wD5-f4-z1F"/>
+            </constraints>
+            <connections>
+                <outlet property="nameLabel" destination="VD4-5h-Z6f" id="3J7-dh-f0T"/>
+                <outlet property="optionsButton" destination="maD-dN-Y3Y" id="lch-y1-GcC"/>
+            </connections>
+            <point key="canvasLocation" x="-21" y="9.5"/>
+        </customView>
+    </objects>
+</document>
