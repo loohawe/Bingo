@@ -13,6 +13,7 @@ target 'MogoAirport' do
   pod 'Yaml'
   pod 'Stencil', '>= 0.8.0'
   pod 'PathKit'
+  pod 'PromiseKit'
 
   target 'MogoAirportTests' do
 

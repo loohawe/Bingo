@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14109" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14109"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner"/>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="c22-O7-iKe" customClass="OutputView" customModule="MogoAirport" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="480" height="200"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <customView translatesAutoresizingMaskIntoConstraints="NO" id="LJq-aT-LtU" customClass="ITProgressBar">
+                    <rect key="frame" x="20" y="184" width="440" height="8"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="8" id="oZU-XG-COj"/>
+                    </constraints>
+                </customView>
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Vva-dj-wBf">
+                    <rect key="frame" x="400" y="10" width="60" height="17"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="fYN-Uc-qmM"/>
+                        <constraint firstAttribute="height" constant="16" id="qxS-Xk-zpD"/>
+                    </constraints>
+                    <buttonCell key="cell" type="inline" title="clear" bezelStyle="inline" alignment="center" borderStyle="border" inset="2" id="93P-DO-NH2">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="smallSystemBold"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="clearButtonAction:" target="c22-O7-iKe" id="aRY-8P-t0A"/>
+                    </connections>
+                </button>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="mZU-Qa-YnF">
+                    <rect key="frame" x="18" y="13" width="29" height="13"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="13" id="jeA-JT-xT8"/>
+                        <constraint firstAttribute="width" constant="25" id="vmN-8H-Elj"/>
+                    </constraints>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="0.4.0" id="K6a-aE-rQR">
+                        <font key="font" metaFont="system" size="10"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jRZ-1L-OyK" customClass="BGScrollView" customModule="MogoAirport" customModuleProvider="target">
+                    <rect key="frame" x="20" y="35" width="440" height="145"/>
+                    <clipView key="contentView" id="jhf-ed-mv2" customClass="BGClipView" customModule="MogoAirport" customModuleProvider="target">
+                        <rect key="frame" x="1" y="1" width="423" height="143"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView importsGraphics="NO" verticallyResizable="YES" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="tNr-7v-RIn">
+                                <rect key="frame" x="0.0" y="0.0" width="423" height="143"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="textColor" red="0.8004062546355476" green="0.87613023477157359" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <size key="minSize" width="423" height="143"/>
+                                <size key="maxSize" width="463" height="10000000"/>
+                                <color key="insertionPointColor" red="0.39512611040609136" green="0.39512611040609136" blue="0.39512611040609136" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </clipView>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="145" id="lBf-aO-tUi"/>
+                    </constraints>
+                    <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="s7Q-2Q-rxJ">
+                        <rect key="frame" x="-100" y="-100" width="87" height="18"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </scroller>
+                    <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="efk-ae-jc6">
+                        <rect key="frame" x="424" y="1" width="15" height="143"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </scroller>
+                </scrollView>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="LJq-aT-LtU" secondAttribute="trailing" constant="20" id="J9p-6b-HPU"/>
+                <constraint firstItem="Vva-dj-wBf" firstAttribute="top" secondItem="jRZ-1L-OyK" secondAttribute="bottom" constant="8" id="PTL-gE-BXk"/>
+                <constraint firstItem="jRZ-1L-OyK" firstAttribute="top" secondItem="LJq-aT-LtU" secondAttribute="bottom" constant="4" id="VTG-o7-8Zf"/>
+                <constraint firstItem="mZU-Qa-YnF" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" constant="20" id="c1c-6N-RcZ"/>
+                <constraint firstItem="jRZ-1L-OyK" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" constant="20" id="igt-Rs-XpD"/>
+                <constraint firstAttribute="trailing" secondItem="jRZ-1L-OyK" secondAttribute="trailing" constant="20" id="lMs-d0-Fsy"/>
+                <constraint firstItem="LJq-aT-LtU" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" constant="20" id="mdb-2n-mwO"/>
+                <constraint firstAttribute="trailing" secondItem="Vva-dj-wBf" secondAttribute="trailing" constant="20" id="sIX-L8-rat"/>
+                <constraint firstItem="mZU-Qa-YnF" firstAttribute="centerY" secondItem="Vva-dj-wBf" secondAttribute="centerY" id="yCV-VI-NNv"/>
+                <constraint firstItem="LJq-aT-LtU" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" constant="8" id="zhS-i7-uYV"/>
+            </constraints>
+            <connections>
+                <outlet property="progressBar" destination="LJq-aT-LtU" id="KXo-4T-FtC"/>
+                <outlet property="scrollView" destination="jRZ-1L-OyK" id="QDS-N6-egL"/>
+                <outlet property="textView" destination="tNr-7v-RIn" id="3E3-BK-xp2"/>
+            </connections>
+            <point key="canvasLocation" x="139" y="226.5"/>
+        </customView>
+    </objects>
+</document>

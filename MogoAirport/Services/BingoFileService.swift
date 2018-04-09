@@ -43,7 +43,7 @@ class BingoFileService {
             print(error)
             fatalError("读取文件出错: \(error)")
         }
-        print("\(result)")
+        //print("\(result)")
         return result
     }
     

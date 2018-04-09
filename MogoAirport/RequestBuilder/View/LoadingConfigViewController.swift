@@ -14,16 +14,30 @@ import SnapKit
 class LoadingConfigViewController: NSViewController {
 
     @IBOutlet weak var chooseButton: NSButton!
-    @IBOutlet weak var containerView: NSView!
-    @IBOutlet weak var selectorView: NSView!
+    @IBOutlet weak var configerContainerView: NSView! /// 
+    @IBOutlet weak var projectContainerView: NSView! /// 选择工程 view 的 container
+    
+    @IBOutlet weak var outputContainerView: BGView! /// 输出的 container
+    private var outputView: OutputView!
     
     private var dataCenter: YamlDataService!
+    private lazy var elementFactory: ElementFactoryViewModel = {
+        let eleVM = ElementFactoryViewModel()
+        eleVM.setDataCenter(dataCenter)
+        return eleVM
+    }()
     
+    @IBOutlet weak var rightPannelWidth: NSLayoutConstraint! /// 右边面板宽度
+    @IBOutlet weak var bottomPannelWidth: NSLayoutConstraint! /// 底部面板宽度
+    
+    @IBOutlet weak var bingoAction: NSLayoutConstraint!
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        containerView.isHidden = true
-        selectorView.isHidden = true
+        configerContainerView.isHidden = true
+        projectContainerView.isHidden = true
+        
+        addOutputView()
     }
     
     override func viewWillAppear() {
@@ -43,13 +57,19 @@ class LoadingConfigViewController: NSViewController {
         openPanel.begin { [weak openPanel, weak self] (result) in
             guard let `openPanel` = openPanel, let `self` = self else { return }
             
-            if result.rawValue == NSFileHandlingPanelOKButton {
+            if result.rawValue == NSApplication.ModalResponse.OK.rawValue {
                 guard let location = openPanel.url else { return }
                 
                 self.loadYmlFile(location)
                 StoreService().ymlFilePath = location
             }
         }
+    }
+    
+
+    @IBAction func bingoAction(_ sender: NSButton) {
+        let kv = elementFactory.keyValue
+        print(kv)
     }
     
     private func loadYmlFile(_ location: URL) {
@@ -69,13 +89,15 @@ class LoadingConfigViewController: NSViewController {
             }
             dataCenter = YamlDataService(yaml)
             
+            /**
             guard let thisWindow = self.view.window else { fatalError() }
             var frame = thisWindow.frame
-            frame.origin.y = frame.origin.y - (500.0 - frame.size.height)
-            frame.size.height = 500.0
-            self.view.window?.setFrame(frame, display: true)
-            self.containerView.isHidden = false
-            self.selectorView.isHidden = false
+            frame.origin.y = frame.origin.y - (600.0 - frame.size.height)
+            frame.size.height = 600.0
+            self.view.window?.setFrame(frame, display: true)**/
+            
+            self.configerContainerView.isHidden = false
+            self.projectContainerView.isHidden = false
             
             self.chooseButton.title = "...\(String(location.absoluteString.suffix(26)))"
             
@@ -84,18 +106,62 @@ class LoadingConfigViewController: NSViewController {
     }
     
     private func openProjectSelector(_ projList: [String]) {
-        print(projList)
+        //print(projList)
         
-        let selectView: ListSelectedView = ListSelectedView.generateView()
-        let selectViewModel = ListSelectedViewModel(name: "选择工程", options: projList)
+        let selectView: ListSelectedView = projectContainerView.addedSubviewForClass(ListSelectedView.self)
+        let selectProjConfiger = UIConfigerItem(.List, key: "", candidate: projList, name: "选择工程")
+        let selectViewModel = ListSelectedViewModel(selectProjConfiger)
         
         selectView.name = selectViewModel.name
-        selectViewModel.options.bind(to: selectView.rx.options).disposed(by: rx.disposeBag)
+        selectViewModel.options.bind(to: selectView.rx.options).disposed(by: rxDisposeBag)
         
-        selectorView.addSubview(selectView)
-        selectView.snp.makeConstraints { (make) in
-            make.edges.equalToSuperview()
+        selectView.selectIndex
+            //.debug()
+            .subscribe(onNext: dataCenter.selectProject)
+            .disposed(by: rxDisposeBag)
+        
+        selectView.selectIndex
+            .subscribe(onNext: { [weak self] (_) in
+                
+                guard let `self` = self else { return }
+                self.elementFactory.updateElement()
+                self.findMainCanvasViewController()?.setElementFactory(self.elementFactory)
+                self.findMainCanvasViewController()?.displayElement()
+            })
+            .disposed(by: rxDisposeBag)
+    }
+    
+    private func findMainCanvasViewController() -> MainCanvasViewController? {
+        var mainCanvas: MainCanvasViewController?
+        childViewControllers.forEach { (item) in
+            if let mainVC = item as? MainCanvasViewController {
+                mainCanvas = mainVC
+            }
         }
+        return mainCanvas
+    }
+}
+
+extension LoadingConfigViewController {
+    
+    private func addOutputView() {
+        outputView = outputContainerView.addedSubviewForClass(OutputView.self)
+        
+        /**
+        DispatchQueue.global().async {
+            for _ in 0...1000 {
+                sleep(1)
+                DispatchQueue.main.async {
+                    let randomInt: UInt32 = arc4random()
+                    if randomInt % 2 == 0 {
+                        self.outputView.startLoading()
+                    } else {
+                        self.outputView.endLoading()
+                    }
+                    self.outputView.output("--\(randomInt)--")
+                }
+            }
+        }**/
     }
 }
 

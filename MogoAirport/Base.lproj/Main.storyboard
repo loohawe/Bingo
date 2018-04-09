@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="jGA-0Y-lOj">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="jGA-0Y-lOj">
     <dependencies>
-        <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13771"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14109"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
         <capability name="system font weights other than Regular or Bold" minToolsVersion="7.0"/>
     </dependencies>
@@ -659,7 +658,7 @@
                 <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="MogoAirport" customModuleProvider="target"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="0.0"/>
+            <point key="canvasLocation" x="-89" y="-46"/>
         </scene>
         <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
@@ -668,7 +667,7 @@
                     <window key="window" title="Bingo" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="Ckk-yw-fiv">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-                        <rect key="contentRect" x="196" y="240" width="480" height="150"/>
+                        <rect key="contentRect" x="196" y="240" width="850" height="730"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
                     </window>
                     <connections>
@@ -677,77 +676,147 @@
                 </windowController>
                 <customObject id="6f7-a7-6o1" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="250"/>
+            <point key="canvasLocation" x="-78" y="447"/>
         </scene>
         <!--Loading Config View Controller-->
         <scene sceneID="DJe-Li-gtI">
             <objects>
                 <viewController id="lux-uF-9LG" customClass="LoadingConfigViewController" customModule="MogoAirport" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="XO3-Dw-asj">
-                        <rect key="frame" x="0.0" y="0.0" width="450" height="150"/>
+                        <rect key="frame" x="0.0" y="0.0" width="850" height="730"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Hfz-8t-iqg">
-                                <rect key="frame" x="127" y="102" width="196" height="22"/>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="x40-ZX-9qz" userLabel="MainView" customClass="BGView" customModule="MogoAirport" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="231" width="649" height="499"/>
+                                <subviews>
+                                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="mOb-QH-rgd">
+                                        <rect key="frame" x="0.0" y="431" width="649" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="JMI-U1-CEN"/>
+                                        </constraints>
+                                    </customView>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="wgH-ru-HxY">
+                                        <rect key="frame" x="8" y="467" width="192" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="192" id="YJN-gs-8cU"/>
+                                            <constraint firstAttribute="height" constant="22" id="hTN-eN-Fcf"/>
+                                        </constraints>
+                                        <buttonCell key="cell" type="roundTextured" title="请选择 Bingo 文件" bezelStyle="texturedRounded" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="KQN-NM-GZt">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="chooseButtonAction:" target="lux-uF-9LG" id="h68-BQ-MTd"/>
+                                        </connections>
+                                    </button>
+                                    <containerView translatesAutoresizingMaskIntoConstraints="NO" id="noG-2o-Zs8">
+                                        <rect key="frame" x="0.0" y="0.0" width="649" height="431"/>
+                                        <connections>
+                                            <segue destination="69j-rk-fSs" kind="embed" id="TAZ-vC-Ma1"/>
+                                        </connections>
+                                    </containerView>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="1pH-lw-yFy">
+                                        <rect key="frame" x="557" y="462" width="75" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="SIp-dv-o0q"/>
+                                            <constraint firstAttribute="width" constant="63" id="xfd-Iq-oew"/>
+                                        </constraints>
+                                        <buttonCell key="cell" type="push" title="Bingo" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Bjl-cY-qC7">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="bingoAction:" target="lux-uF-9LG" id="Pj0-Mi-yl1"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="22" id="Ciu-dx-SAx"/>
-                                </constraints>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="请选择 Bingo 配置文件" id="oqm-w8-cbu">
-                                    <font key="font" size="18" name=".PingFangSC-Medium"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="wgH-ru-HxY">
-                                <rect key="frame" x="129" y="70" width="192" height="25"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="22" id="8Gi-3C-Qg8"/>
-                                </constraints>
-                                <buttonCell key="cell" type="roundTextured" title="请选择 Bingo 文件" bezelStyle="texturedRounded" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="KQN-NM-GZt">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="chooseButtonAction:" target="lux-uF-9LG" id="h68-BQ-MTd"/>
-                                </connections>
-                            </button>
-                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="mOb-QH-rgd">
-                                <rect key="frame" x="0.0" y="9" width="450" height="55"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="55" id="fYI-1Z-hOh"/>
+                                    <constraint firstAttribute="trailing" secondItem="1pH-lw-yFy" secondAttribute="trailing" constant="23" id="3Dr-DZ-k9j"/>
+                                    <constraint firstItem="mOb-QH-rgd" firstAttribute="top" secondItem="wgH-ru-HxY" secondAttribute="bottom" constant="8" id="9gd-Pm-mMj"/>
+                                    <constraint firstItem="noG-2o-Zs8" firstAttribute="top" secondItem="mOb-QH-rgd" secondAttribute="bottom" id="CFN-3h-HpX"/>
+                                    <constraint firstAttribute="trailing" secondItem="noG-2o-Zs8" secondAttribute="trailing" id="LGs-qu-gCB"/>
+                                    <constraint firstItem="mOb-QH-rgd" firstAttribute="leading" secondItem="x40-ZX-9qz" secondAttribute="leading" id="NbQ-ye-xFK"/>
+                                    <constraint firstAttribute="bottom" secondItem="noG-2o-Zs8" secondAttribute="bottom" id="S8U-VU-2ny"/>
+                                    <constraint firstItem="wgH-ru-HxY" firstAttribute="leading" secondItem="x40-ZX-9qz" secondAttribute="leading" constant="8" id="Whj-q4-PAc"/>
+                                    <constraint firstItem="1pH-lw-yFy" firstAttribute="centerY" secondItem="wgH-ru-HxY" secondAttribute="centerY" id="dR2-k0-WPc"/>
+                                    <constraint firstItem="noG-2o-Zs8" firstAttribute="leading" secondItem="x40-ZX-9qz" secondAttribute="leading" id="j8Y-FL-XAE"/>
+                                    <constraint firstItem="wgH-ru-HxY" firstAttribute="top" secondItem="x40-ZX-9qz" secondAttribute="top" constant="8" id="tl1-Sx-w6M"/>
+                                    <constraint firstAttribute="trailing" secondItem="mOb-QH-rgd" secondAttribute="trailing" id="yNR-3d-tT1"/>
                                 </constraints>
                             </customView>
-                            <containerView misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="noG-2o-Zs8">
-                                <rect key="frame" x="0.0" y="-141" width="450" height="141"/>
-                                <connections>
-                                    <segue destination="69j-rk-fSs" kind="embed" id="TAZ-vC-Ma1"/>
-                                </connections>
-                            </containerView>
+                            <box horizontalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="KQf-KQ-ILd">
+                                <rect key="frame" x="647" y="230" width="5" height="500"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="1" id="uXh-aK-l1J"/>
+                                </constraints>
+                            </box>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="eLO-pu-Vqk" userLabel="RequestView">
+                                <rect key="frame" x="650" y="231" width="200" height="499"/>
+                            </customView>
+                            <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="1IS-Za-5BE">
+                                <rect key="frame" x="0.0" y="228" width="850" height="5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="g5q-mT-jsH"/>
+                                </constraints>
+                            </box>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="vcM-XU-ViX" userLabel="ConsoleView" customClass="BGView" customModule="MogoAirport" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="30" width="850" height="200"/>
+                                <subviews>
+                                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="WQd-cu-9sS" customClass="BGView" customModule="MogoAirport" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="850" height="200"/>
+                                    </customView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="WQd-cu-9sS" firstAttribute="leading" secondItem="vcM-XU-ViX" secondAttribute="leading" id="08G-s0-Luc"/>
+                                    <constraint firstAttribute="bottom" secondItem="WQd-cu-9sS" secondAttribute="bottom" id="Eyb-AT-ePv"/>
+                                    <constraint firstAttribute="trailing" secondItem="WQd-cu-9sS" secondAttribute="trailing" id="Jrd-a1-yrA"/>
+                                    <constraint firstItem="WQd-cu-9sS" firstAttribute="top" secondItem="vcM-XU-ViX" secondAttribute="top" id="MLq-wu-wmj"/>
+                                </constraints>
+                            </customView>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="rEp-gC-Ro2" userLabel="BottomView" customClass="BGView" customModule="MogoAirport" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="850" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="dZ3-4G-LDS"/>
+                                </constraints>
+                            </customView>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="noG-2o-Zs8" firstAttribute="leading" secondItem="XO3-Dw-asj" secondAttribute="leading" id="17N-1F-HzD"/>
-                            <constraint firstItem="Hfz-8t-iqg" firstAttribute="centerX" secondItem="XO3-Dw-asj" secondAttribute="centerX" id="4vf-CU-vG7"/>
-                            <constraint firstItem="wgH-ru-HxY" firstAttribute="width" secondItem="Hfz-8t-iqg" secondAttribute="width" id="G0g-ig-uwd"/>
-                            <constraint firstItem="mOb-QH-rgd" firstAttribute="top" secondItem="wgH-ru-HxY" secondAttribute="bottom" constant="8" id="HXU-RF-I8N"/>
-                            <constraint firstItem="wgH-ru-HxY" firstAttribute="top" secondItem="Hfz-8t-iqg" secondAttribute="bottom" constant="8" id="Ib8-vI-MjT"/>
-                            <constraint firstItem="Hfz-8t-iqg" firstAttribute="top" secondItem="XO3-Dw-asj" secondAttribute="top" constant="26" id="WEc-33-Tyg"/>
-                            <constraint firstItem="wgH-ru-HxY" firstAttribute="centerX" secondItem="XO3-Dw-asj" secondAttribute="centerX" id="WZ0-9s-bqM"/>
-                            <constraint firstAttribute="trailing" secondItem="noG-2o-Zs8" secondAttribute="trailing" id="eUG-QS-B27"/>
-                            <constraint firstAttribute="bottom" secondItem="noG-2o-Zs8" secondAttribute="bottom" id="pb0-8K-72D"/>
-                            <constraint firstItem="noG-2o-Zs8" firstAttribute="top" secondItem="mOb-QH-rgd" secondAttribute="bottom" constant="8" id="sU9-4E-8fc"/>
-                            <constraint firstAttribute="trailing" secondItem="mOb-QH-rgd" secondAttribute="trailing" id="vWx-FK-XVe"/>
-                            <constraint firstItem="mOb-QH-rgd" firstAttribute="leading" secondItem="XO3-Dw-asj" secondAttribute="leading" id="xxd-pr-Rlt"/>
+                            <constraint firstAttribute="trailing" secondItem="vcM-XU-ViX" secondAttribute="trailing" id="2dR-Kv-RdK"/>
+                            <constraint firstItem="x40-ZX-9qz" firstAttribute="top" secondItem="XO3-Dw-asj" secondAttribute="top" id="2sf-cy-oph"/>
+                            <constraint firstAttribute="bottom" secondItem="rEp-gC-Ro2" secondAttribute="bottom" id="3Wx-el-GUn"/>
+                            <constraint firstItem="x40-ZX-9qz" firstAttribute="leading" secondItem="XO3-Dw-asj" secondAttribute="leading" id="4bv-g2-rpu"/>
+                            <constraint firstItem="KQf-KQ-ILd" firstAttribute="top" secondItem="XO3-Dw-asj" secondAttribute="top" id="4nM-zt-8AQ"/>
+                            <constraint firstItem="rEp-gC-Ro2" firstAttribute="top" secondItem="vcM-XU-ViX" secondAttribute="bottom" id="9Ff-f7-jZR"/>
+                            <constraint firstItem="eLO-pu-Vqk" firstAttribute="top" secondItem="XO3-Dw-asj" secondAttribute="top" id="9tz-Nc-8U4"/>
+                            <constraint firstItem="vcM-XU-ViX" firstAttribute="top" secondItem="1IS-Za-5BE" secondAttribute="bottom" id="Afw-AF-pM4"/>
+                            <constraint firstItem="1IS-Za-5BE" firstAttribute="top" secondItem="eLO-pu-Vqk" secondAttribute="bottom" id="EEr-c0-SfX"/>
+                            <constraint firstItem="rEp-gC-Ro2" firstAttribute="top" secondItem="1IS-Za-5BE" secondAttribute="bottom" constant="200" id="UKb-0k-Pd8"/>
+                            <constraint firstAttribute="trailing" secondItem="eLO-pu-Vqk" secondAttribute="trailing" id="b41-OB-R9k"/>
+                            <constraint firstItem="vcM-XU-ViX" firstAttribute="leading" secondItem="XO3-Dw-asj" secondAttribute="leading" id="b7c-tS-lHM"/>
+                            <constraint firstItem="1IS-Za-5BE" firstAttribute="leading" secondItem="XO3-Dw-asj" secondAttribute="leading" id="cXc-bZ-CKp"/>
+                            <constraint firstAttribute="trailing" secondItem="KQf-KQ-ILd" secondAttribute="trailing" constant="200" id="dyY-rs-m3a"/>
+                            <constraint firstItem="1IS-Za-5BE" firstAttribute="top" secondItem="KQf-KQ-ILd" secondAttribute="bottom" constant="-1" id="frw-3f-mjf"/>
+                            <constraint firstItem="eLO-pu-Vqk" firstAttribute="leading" secondItem="KQf-KQ-ILd" secondAttribute="trailing" id="gem-35-Yjy"/>
+                            <constraint firstAttribute="trailing" secondItem="1IS-Za-5BE" secondAttribute="trailing" id="gx8-3Q-j29"/>
+                            <constraint firstItem="1IS-Za-5BE" firstAttribute="top" secondItem="x40-ZX-9qz" secondAttribute="bottom" id="lNo-26-Xuu"/>
+                            <constraint firstItem="KQf-KQ-ILd" firstAttribute="leading" secondItem="x40-ZX-9qz" secondAttribute="trailing" id="msn-zV-2RT"/>
+                            <constraint firstItem="rEp-gC-Ro2" firstAttribute="leading" secondItem="XO3-Dw-asj" secondAttribute="leading" id="par-I3-x1Y"/>
+                            <constraint firstAttribute="trailing" secondItem="rEp-gC-Ro2" secondAttribute="trailing" id="zuf-ud-2De"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="bingoAction" destination="dR2-k0-WPc" id="74B-jM-0aY"/>
+                        <outlet property="bottomPannelWidth" destination="UKb-0k-Pd8" id="Og8-DQ-fbk"/>
                         <outlet property="chooseButton" destination="wgH-ru-HxY" id="yJs-06-bby"/>
-                        <outlet property="containerView" destination="noG-2o-Zs8" id="V02-ga-4oX"/>
-                        <outlet property="selectorView" destination="mOb-QH-rgd" id="7Cw-jo-eGj"/>
+                        <outlet property="configerContainerView" destination="noG-2o-Zs8" id="RA4-vt-FxF"/>
+                        <outlet property="outputContainerView" destination="WQd-cu-9sS" id="uS5-Qo-5xT"/>
+                        <outlet property="projectContainerView" destination="mOb-QH-rgd" id="ima-hD-hZl"/>
+                        <outlet property="rightPannelWidth" destination="dyY-rs-m3a" id="Xz4-jP-JYi"/>
                     </connections>
                 </viewController>
                 <customObject id="zCs-kd-UNL" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="719" y="250"/>
+            <point key="canvasLocation" x="919" y="447"/>
         </scene>
         <!--Main Canvas View Controller-->
         <scene sceneID="mmV-bH-NNN">
@@ -759,7 +828,7 @@
                         <subviews>
                             <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cNP-Kk-mtj" customClass="BGScrollView" customModule="MogoAirport" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="450" height="590"/>
-                                <clipView key="contentView" id="wOE-l1-Fln">
+                                <clipView key="contentView" id="wOE-l1-Fln" customClass="BGClipView" customModule="MogoAirport" customModuleProvider="target">
                                     <rect key="frame" x="1" y="1" width="448" height="588"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
@@ -792,12 +861,12 @@
                 </viewController>
                 <customObject id="sLD-9R-Vx0" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="719" y="907"/>
+            <point key="canvasLocation" x="719" y="1387"/>
         </scene>
         <!--Bingo-->
         <scene sceneID="x23-XT-edu">
             <objects>
-                <viewController title="Bingo" id="DIr-VT-GZi" customClass="BuilderViewController" customModule="MogoAirport" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Bingo" storyboardIdentifier="BuilderViewController" id="DIr-VT-GZi" customClass="BuilderViewController" customModule="MogoAirport" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="cqa-zI-VI7">
                         <rect key="frame" x="0.0" y="0.0" width="454" height="658"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -1005,17 +1074,6 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                             </scrollView>
-                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="AfT-3K-GR2">
-                                <rect key="frame" x="20" y="20" width="414" height="190"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="190" id="aM3-IB-zCk"/>
-                                </constraints>
-                                <textFieldCell key="cell" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="ZeG-OD-ho9">
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="kN4-Ea-ZF8">
                                 <rect key="frame" x="226" y="435" width="100" height="19"/>
                                 <constraints>
@@ -1112,6 +1170,17 @@
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="AfT-3K-GR2">
+                                <rect key="frame" x="20" y="20" width="414" height="190"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="190" id="aM3-IB-zCk"/>
+                                </constraints>
+                                <textFieldCell key="cell" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="ZeG-OD-ho9">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                         <constraints>
                             <constraint firstItem="G3Q-Zo-qCl" firstAttribute="top" secondItem="QkQ-dq-Tln" secondAttribute="bottom" constant="8" id="21n-CX-979"/>
@@ -1193,7 +1262,7 @@
                 </viewController>
                 <customObject id="3nd-1i-02q" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="113" y="941"/>
+            <point key="canvasLocation" x="120" y="1421"/>
         </scene>
     </scenes>
     <resources>

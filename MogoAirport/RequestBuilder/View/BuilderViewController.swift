@@ -171,7 +171,7 @@ extension BuilderViewController {
     func bindModel() {
         viewModel.locSubject.subscribe { (event) in
             self.locationButton.title = event.element?.path ?? "Choose Project"
-        }.addDisposableTo(disposeBag)
+        }.disposed(by: rxDisposeBag)
         
         hatNameTextField.delegate = viewModel
         pathTextField.delegate = viewModel
@@ -208,7 +208,7 @@ extension BuilderViewController {
                         resultView.removeFromSuperview()
                         self.reLayoutParamView()
                     }
-                }.disposed(by: resultView.disposeBag)
+                }.disposed(by: resultView.rxDisposeBag)
                 
                 return resultView
             }

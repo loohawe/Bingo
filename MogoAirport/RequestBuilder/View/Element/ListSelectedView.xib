@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="13771" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14109" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13771"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14109"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -16,7 +16,6 @@
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="VD4-5h-Z6f">
                     <rect key="frame" x="18" y="19" width="114" height="17"/>
                     <constraints>
-                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="110" id="QOM-7G-Kl8"/>
                         <constraint firstAttribute="width" constant="110" id="hnA-kJ-esF"/>
                         <constraint firstAttribute="height" constant="17" id="yOy-A9-Tfg"/>
                     </constraints>
@@ -40,7 +39,7 @@
                         </menu>
                     </popUpButtonCell>
                 </popUpButton>
-                <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="4yY-s2-LXV">
+                <box hidden="YES" verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="4yY-s2-LXV">
                     <rect key="frame" x="0.0" y="-2" width="480" height="5"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="1" id="oND-0L-U1r"/>

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="13771" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14109" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13771"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14109"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -14,7 +14,7 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
                 <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="lK0-VY-hGS">
-                    <rect key="frame" x="53" y="16" width="299" height="22"/>
+                    <rect key="frame" x="73" y="16" width="279" height="22"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="22" id="tJT-BS-c7m"/>
                     </constraints>
@@ -47,7 +47,7 @@
                     </connections>
                 </popUpButton>
                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="msM-ma-A0u">
-                    <rect key="frame" x="-6" y="10" width="57" height="32"/>
+                    <rect key="frame" x="14" y="10" width="57" height="32"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="45" id="lBj-tC-nEY"/>
                         <constraint firstAttribute="height" constant="21" id="vhp-fV-VYz"/>
@@ -68,7 +68,7 @@
                 <constraint firstItem="lK0-VY-hGS" firstAttribute="centerY" secondItem="c22-O7-iKe" secondAttribute="centerY" id="nLf-97-7a2"/>
                 <constraint firstItem="qn7-MH-gB6" firstAttribute="centerY" secondItem="c22-O7-iKe" secondAttribute="centerY" id="o5O-nW-Iyl"/>
                 <constraint firstAttribute="trailing" secondItem="qn7-MH-gB6" secondAttribute="trailing" constant="20" id="op7-TP-6s0"/>
-                <constraint firstItem="msM-ma-A0u" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" id="rt7-0H-gce"/>
+                <constraint firstItem="msM-ma-A0u" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" constant="20" id="rt7-0H-gce"/>
             </constraints>
             <connections>
                 <outlet property="deleteButtonAction" destination="lK0-VY-hGS" id="bl1-SX-6xf"/>

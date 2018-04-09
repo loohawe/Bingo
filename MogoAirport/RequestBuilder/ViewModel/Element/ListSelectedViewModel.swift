@@ -8,14 +8,27 @@
 
 import Cocoa
 import RxSwift
+import RxCocoa
 
-class ListSelectedViewModel {
+class ListSelectedViewModel: NSObject, ElementViewModelProtocol {
 
-    let name: String
+    var name: String {
+        return uiItem.name
+    }
     let options: BehaviorSubject<[String]>
     
-    init(name aName: String, options list: [String]) {
-        name = aName
-        options = BehaviorSubject(value: list)
+    var uiItem: UIConfigerItem
+    
+    required init(_ configer: UIConfigerItem) {
+        uiItem = configer
+        options = BehaviorSubject(value: configer.candidate)
+    }
+}
+
+extension Reactive where Base == ListSelectedViewModel {
+    var value: Binder<String> {
+        return Binder(base, binding: { (base, valueStr) in
+            base.uiItem.value = valueStr
+        })
     }
 }

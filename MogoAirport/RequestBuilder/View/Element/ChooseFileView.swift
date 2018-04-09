@@ -21,7 +21,6 @@ extension ChooseFileView: XibLoadable {
 public class ChooseFileView: BGView {
     
     public var name: String?
-    //public var filePath: URL?
     public var filePath: BehaviorSubject<URL?> = BehaviorSubject(value: nil)
 
     @IBOutlet weak var nameLabel: NSTextField!
@@ -32,7 +31,7 @@ public class ChooseFileView: BGView {
                 .subscribe(onNext: { [weak self] (location) in
                     self?.fileButton.title = location
                 })
-                .disposed(by: rx.disposeBag)
+                .disposed(by: rxDisposeBag)
         }
     }
     
@@ -51,6 +50,17 @@ public class ChooseFileView: BGView {
         panelSer.openDirectory { [weak self] (url) in
             self?.filePath.onNext(url)
         }
+    }
+}
+
+extension ChooseFileView: ElementViewProtocol {
+    
+    var value: Any? {
+        return try? filePath.value()
+    }
+    
+    func emptyValue() {
+        filePath.onNext(nil)
     }
 }
 

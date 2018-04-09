@@ -9,17 +9,17 @@
 import Foundation
 import RxSwift
 
-private var disposeBagMark: Void?
+private var disposeBagMark: UInt8 = 0
 
-extension Reactive where Base: NSObject {
+extension NSObject {
     
-    public var disposeBag: DisposeBag {
+    public var rxDisposeBag: DisposeBag {
         get {
             if let dis = objc_getAssociatedObject(self, &disposeBagMark) as? DisposeBag {
                 return dis
             } else {
                 let dis = DisposeBag()
-                objc_setAssociatedObject(self, &disposeBagMark, dis, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN)
+                objc_setAssociatedObject(self, &disposeBagMark, dis, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
                 return dis
             }
         }

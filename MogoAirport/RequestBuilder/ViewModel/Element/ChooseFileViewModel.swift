@@ -9,7 +9,7 @@
 import RxSwift
 import RxCocoa
 
-public class ChooseFileViewModel: ElementViewModelProtocol {
+public class ChooseFileViewModel: NSObject, ElementViewModelProtocol {
     
     public var uiItem: UIConfigerItem
     
@@ -19,7 +19,6 @@ public class ChooseFileViewModel: ElementViewModelProtocol {
     
 }
 
-extension ChooseFileViewModel: ReactiveCompatible {}
 extension Reactive where Base == ChooseFileViewModel {
     
     public var value: Binder<String> {

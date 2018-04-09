@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14109" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14109"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner"/>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="c22-O7-iKe" customClass="ParametersView" customModule="MogoAirport" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="480" height="199"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Faw-gr-MEi">
+                    <rect key="frame" x="18" y="163" width="114" height="17"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="110" id="3av-MZ-M7z"/>
+                        <constraint firstAttribute="height" constant="17" id="6zC-1t-gwy"/>
+                    </constraints>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Name" id="BHA-el-tqy">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eWT-gu-oxu" customClass="BGScrollView" customModule="MogoAirport" customModuleProvider="target">
+                    <rect key="frame" x="20" y="20" width="440" height="135"/>
+                    <clipView key="contentView" id="BMu-Hw-NgP" customClass="BGClipView" customModule="MogoAirport" customModuleProvider="target">
+                        <rect key="frame" x="1" y="1" width="438" height="133"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Avf-HH-sAm">
+                                <rect key="frame" x="0.0" y="0.0" width="423" height="118"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.8685579360482778" green="0.92196476809853545" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </clipView>
+                    <scroller key="horizontalScroller" verticalHuggingPriority="750" horizontal="YES" id="UXx-6t-MME">
+                        <rect key="frame" x="1" y="118" width="438" height="16"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </scroller>
+                    <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="VM1-Do-ch1">
+                        <rect key="frame" x="423" y="1" width="16" height="133"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </scroller>
+                </scrollView>
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="F5G-6r-HJx">
+                    <rect key="frame" x="370" y="162" width="90" height="19"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="90" id="FwI-Yk-krL"/>
+                        <constraint firstAttribute="height" constant="18" id="N6g-QX-QhD"/>
+                    </constraints>
+                    <buttonCell key="cell" type="roundRect" title="+" bezelStyle="roundedRect" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="fmM-R0-TVH">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="cellTitle"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="addParametersAction:" target="c22-O7-iKe" id="BfP-P7-vvp"/>
+                    </connections>
+                </button>
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ee6-RF-mgq">
+                    <rect key="frame" x="272" y="162" width="90" height="19"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="18" id="meC-0S-DR6"/>
+                        <constraint firstAttribute="width" constant="90" id="y48-Md-GXX"/>
+                    </constraints>
+                    <buttonCell key="cell" type="roundRect" title="clear" bezelStyle="roundedRect" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="kUm-Ql-tGo">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="cellTitle"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="clearParametersAction:" target="c22-O7-iKe" id="RyK-uI-czk"/>
+                    </connections>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstItem="eWT-gu-oxu" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" constant="20" id="8Kz-pU-nbd"/>
+                <constraint firstItem="Faw-gr-MEi" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" constant="19" id="BPQ-pF-eZq"/>
+                <constraint firstAttribute="bottom" secondItem="eWT-gu-oxu" secondAttribute="bottom" constant="20" id="BYF-9f-6no"/>
+                <constraint firstItem="F5G-6r-HJx" firstAttribute="centerY" secondItem="Faw-gr-MEi" secondAttribute="centerY" id="D6z-rm-7Sf"/>
+                <constraint firstItem="ee6-RF-mgq" firstAttribute="centerY" secondItem="Faw-gr-MEi" secondAttribute="centerY" id="GcS-89-T9h"/>
+                <constraint firstItem="Faw-gr-MEi" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" constant="20" id="NkI-3H-gfc"/>
+                <constraint firstAttribute="trailing" secondItem="eWT-gu-oxu" secondAttribute="trailing" constant="20" id="PPf-dE-wp8"/>
+                <constraint firstAttribute="trailing" secondItem="F5G-6r-HJx" secondAttribute="trailing" constant="20" id="cft-bH-T1p"/>
+                <constraint firstItem="eWT-gu-oxu" firstAttribute="top" secondItem="Faw-gr-MEi" secondAttribute="bottom" constant="8" id="fPJ-aU-8Nd"/>
+                <constraint firstItem="F5G-6r-HJx" firstAttribute="leading" secondItem="ee6-RF-mgq" secondAttribute="trailing" constant="8" id="isk-mY-8UU"/>
+            </constraints>
+            <connections>
+                <outlet property="clearButton" destination="ee6-RF-mgq" id="e5m-wT-GYe"/>
+                <outlet property="nameLabel" destination="Faw-gr-MEi" id="unj-7g-RyT"/>
+                <outlet property="scrollView" destination="eWT-gu-oxu" id="Kgg-Yb-l80"/>
+            </connections>
+            <point key="canvasLocation" x="121" y="98"/>
+        </customView>
+    </objects>
+</document>

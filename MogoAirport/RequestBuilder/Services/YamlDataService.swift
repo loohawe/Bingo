@@ -30,7 +30,6 @@ public enum UIType: String {
     case Radio
     case List
     case Param
-    case Output
 }
 
 public class UIConfigerItem {
@@ -39,6 +38,13 @@ public class UIConfigerItem {
     public var value: Any?
     public var candidate: [String]
     public var name: String
+    
+    public init(_ type: UIType, key: String, candidate: [String], name: String) {
+        self.type = type
+        self.key = key
+        self.candidate = candidate
+        self.name = name
+    }
     
     public init(_ yaml: Yaml) {
         guard let yamlUIDic = yaml.dictionary else {
@@ -69,7 +75,7 @@ public class UIConfigerItem {
     }
 }
 
-class YamlDataService {
+public class YamlDataService {
     
     let loaded: YamlLoadedService
     var projectIndex: Int?
@@ -84,26 +90,26 @@ class YamlDataService {
         }
     }()
     
-    lazy var template: [String] = {
+    var template: [String] {
         guard let `projectIndex` = projectIndex else {
             fatalError("获取数据前请先调用 selectProject(_:) 方法制定第几个工程")
         }
         return getTemplate(at: projectIndex)
-    }()
+    }
     
-    lazy var output: String = {
+    var output: String {
         guard let `projectIndex` = projectIndex else {
             fatalError("获取数据前请先调用 selectProject(_:) 方法制定第几个工程")
         }
         return getOutput(at: projectIndex)
-    }()
+    }
     
-    lazy var uiConfiger: [UIConfigerItem] = {
+    var uiConfiger: [UIConfigerItem] {
         guard let `projectIndex` = projectIndex else {
             fatalError("获取数据前请先调用 selectProject(_:) 方法制定第几个工程")
         }
         return getUIConfigers(at: projectIndex)
-    }()
+    }
     
     init(_ yamlLoaded: YamlLoadedService) {
         loaded = yamlLoaded
@@ -111,6 +117,7 @@ class YamlDataService {
     
     public func selectProject(_ index: Int) {
         projectIndex = index
+        //print("###\(index)")
     }
     
     /// 获取配置文件中的模板文件路径

@@ -17,9 +17,11 @@ public class ListSelectedView: BGView, XibLoadable {
             nameLabel.stringValue = name
         }
     }
+    public var selectIndex: BehaviorSubject<Int> = BehaviorSubject(value: 0)
+    
     private var options: [String] = []
 
-    @IBOutlet private weak var nameLabel: NSTextField!
+    @IBOutlet internal weak var nameLabel: NSTextField!
     @IBOutlet private weak var optionsButton: NSPopUpButton!
     
     override public func draw(_ dirtyRect: NSRect) {
@@ -28,7 +30,7 @@ public class ListSelectedView: BGView, XibLoadable {
     
     override public var fittingSize: NSSize {
         let size = super.fittingSize
-        return NSSize(width: size.width, height: 55.0)
+        return NSSize(width: size.width, height: 30.0)
     }
     
     public override func awakeFromNib() {
@@ -40,7 +42,22 @@ public class ListSelectedView: BGView, XibLoadable {
     }
     
     @objc func selectOption() {
-        
+        if let secTitle = optionsButton.titleOfSelectedItem,
+            let index = options.index(of: secTitle) {
+            selectIndex.onNext(index)
+        }
+    }
+}
+
+extension ListSelectedView: ElementViewProtocol {
+    
+    var value: Any? {
+        return optionsButton.titleOfSelectedItem
+    }
+    
+    func emptyValue() {
+        selectIndex.onNext(0)
+        optionsButton.setTitle(options.first ?? "")
     }
 }
 

@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		411E185155708BC3CEEB81ED /* Pods_MogoAirport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06518108CC2E31E8447601FB /* Pods_MogoAirport.framework */; };
+		7502BEBD207B2C4600AEDF8E /* ShWhich.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7502BEBC207B2C4600AEDF8E /* ShWhich.swift */; };
+		7502BEBF207B2E1200AEDF8E /* ShellExecutableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7502BEBE207B2E1200AEDF8E /* ShellExecutableProtocol.swift */; };
+		7502BEC1207B2F2E00AEDF8E /* Shell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7502BEC0207B2F2E00AEDF8E /* Shell.swift */; };
 		750B2A5C1F65086B0057574A /* Bingo_icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 750B2A5B1F65086B0057574A /* Bingo_icon.icns */; };
 		7516C25D2067C20400A82A7A /* ElementFactoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7516C25C2067C20400A82A7A /* ElementFactoryViewModel.swift */; };
 		7516C2622068822900A82A7A /* ElementViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7516C2612068822900A82A7A /* ElementViewModelProtocol.swift */; };
@@ -48,8 +51,21 @@
 		758D26241F5FFC68003D37B7 /* wing.mustache in Resources */ = {isa = PBXBuildFile; fileRef = 758D26231F5FFC68003D37B7 /* wing.mustache */; };
 		758D26261F5FFC75003D37B7 /* request.mustache in Resources */ = {isa = PBXBuildFile; fileRef = 758D26251F5FFC75003D37B7 /* request.mustache */; };
 		758D26281F5FFC97003D37B7 /* mockPlist.mustache in Resources */ = {isa = PBXBuildFile; fileRef = 758D26271F5FFC97003D37B7 /* mockPlist.mustache */; };
+		759CC6342071BCB200DC54BD /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759CC6332071BCB200DC54BD /* InputView.swift */; };
+		759CC6362071BCBF00DC54BD /* InputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 759CC6352071BCBF00DC54BD /* InputView.xib */; };
 		75A94BFD2060DD0100A6B814 /* MainCanvasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A94BFC2060DD0100A6B814 /* MainCanvasViewController.swift */; };
 		75A94C012060ED8C00A6B814 /* LoadingConfigViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A94C002060ED8C00A6B814 /* LoadingConfigViewController.swift */; };
+		75CCF2002079FA3400840E18 /* ShellService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CCF1FF2079FA3400840E18 /* ShellService.swift */; };
+		75F3B7CC2075C51B00E0DEF5 /* InputViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F3B7CB2075C51B00E0DEF5 /* InputViewModel.swift */; };
+		75F3B7CE2075E2ED00E0DEF5 /* ElementViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F3B7CD2075E2ED00E0DEF5 /* ElementViewProtocol.swift */; };
+		75F3B7D32075E4DD00E0DEF5 /* RadioSelectedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F3B7D22075E4DD00E0DEF5 /* RadioSelectedView.swift */; };
+		75F3B7D52075E50100E0DEF5 /* RadioSelectedView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75F3B7D42075E50100E0DEF5 /* RadioSelectedView.xib */; };
+		75F3B7D72077789700E0DEF5 /* RadioSelectedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F3B7D62077789700E0DEF5 /* RadioSelectedViewModel.swift */; };
+		75F3B7D92077A0A400E0DEF5 /* ParametersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F3B7D82077A0A400E0DEF5 /* ParametersView.swift */; };
+		75F3B7DB2077A0C200E0DEF5 /* ParametersView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75F3B7DA2077A0C200E0DEF5 /* ParametersView.xib */; };
+		75F3B7DD2077A12D00E0DEF5 /* ParametersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F3B7DC2077A12D00E0DEF5 /* ParametersViewModel.swift */; };
+		75F3B7DF2078FB8100E0DEF5 /* OutputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F3B7DE2078FB8100E0DEF5 /* OutputView.swift */; };
+		75F3B7E12078FB9A00E0DEF5 /* OutputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75F3B7E02078FB9A00E0DEF5 /* OutputView.xib */; };
 		F1EF4578F8284DB8E33FD217 /* Pods_MogoAirportTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCC8D1DEA091E30A4F0AF421 /* Pods_MogoAirportTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +83,9 @@
 		06518108CC2E31E8447601FB /* Pods_MogoAirport.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MogoAirport.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E55FF66FC5C1F3AD65D6359 /* Pods-MogoAirport.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MogoAirport.release.xcconfig"; path = "Pods/Target Support Files/Pods-MogoAirport/Pods-MogoAirport.release.xcconfig"; sourceTree = "<group>"; };
 		19AA18436F5038EC2DC444D9 /* Pods-MogoAirport.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MogoAirport.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MogoAirport/Pods-MogoAirport.debug.xcconfig"; sourceTree = "<group>"; };
+		7502BEBC207B2C4600AEDF8E /* ShWhich.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShWhich.swift; sourceTree = "<group>"; };
+		7502BEBE207B2E1200AEDF8E /* ShellExecutableProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShellExecutableProtocol.swift; sourceTree = "<group>"; };
+		7502BEC0207B2F2E00AEDF8E /* Shell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shell.swift; sourceTree = "<group>"; };
 		750B2A5B1F65086B0057574A /* Bingo_icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Bingo_icon.icns; sourceTree = "<group>"; };
 		7516C25C2067C20400A82A7A /* ElementFactoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementFactoryViewModel.swift; sourceTree = "<group>"; };
 		7516C2612068822900A82A7A /* ElementViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElementViewModelProtocol.swift; sourceTree = "<group>"; };
@@ -112,8 +131,21 @@
 		758D26231F5FFC68003D37B7 /* wing.mustache */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = wing.mustache; sourceTree = "<group>"; };
 		758D26251F5FFC75003D37B7 /* request.mustache */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = request.mustache; sourceTree = "<group>"; };
 		758D26271F5FFC97003D37B7 /* mockPlist.mustache */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mockPlist.mustache; sourceTree = "<group>"; };
+		759CC6332071BCB200DC54BD /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
+		759CC6352071BCBF00DC54BD /* InputView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InputView.xib; sourceTree = "<group>"; };
 		75A94BFC2060DD0100A6B814 /* MainCanvasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCanvasViewController.swift; sourceTree = "<group>"; };
 		75A94C002060ED8C00A6B814 /* LoadingConfigViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingConfigViewController.swift; sourceTree = "<group>"; };
+		75CCF1FF2079FA3400840E18 /* ShellService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShellService.swift; sourceTree = "<group>"; };
+		75F3B7CB2075C51B00E0DEF5 /* InputViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputViewModel.swift; sourceTree = "<group>"; };
+		75F3B7CD2075E2ED00E0DEF5 /* ElementViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementViewProtocol.swift; sourceTree = "<group>"; };
+		75F3B7D22075E4DD00E0DEF5 /* RadioSelectedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioSelectedView.swift; sourceTree = "<group>"; };
+		75F3B7D42075E50100E0DEF5 /* RadioSelectedView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RadioSelectedView.xib; sourceTree = "<group>"; };
+		75F3B7D62077789700E0DEF5 /* RadioSelectedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioSelectedViewModel.swift; sourceTree = "<group>"; };
+		75F3B7D82077A0A400E0DEF5 /* ParametersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParametersView.swift; sourceTree = "<group>"; };
+		75F3B7DA2077A0C200E0DEF5 /* ParametersView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ParametersView.xib; sourceTree = "<group>"; };
+		75F3B7DC2077A12D00E0DEF5 /* ParametersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParametersViewModel.swift; sourceTree = "<group>"; };
+		75F3B7DE2078FB8100E0DEF5 /* OutputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OutputView.swift; path = MogoAirport/RequestBuilder/View/OutputView.swift; sourceTree = SOURCE_ROOT; };
+		75F3B7E02078FB9A00E0DEF5 /* OutputView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OutputView.xib; sourceTree = "<group>"; };
 		B6078594A638CAE1F4B91902 /* Pods-MogoAirportTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MogoAirportTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MogoAirportTests/Pods-MogoAirportTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BCB2C62FD6F7FE3C96E625E5 /* Pods-MogoAirportTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MogoAirportTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MogoAirportTests/Pods-MogoAirportTests.release.xcconfig"; sourceTree = "<group>"; };
 		DCC8D1DEA091E30A4F0AF421 /* Pods_MogoAirportTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MogoAirportTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -159,12 +191,25 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		7502BEBB207B29ED00AEDF8E /* ShellCommand */ = {
+			isa = PBXGroup;
+			children = (
+				7502BEBE207B2E1200AEDF8E /* ShellExecutableProtocol.swift */,
+				7502BEBC207B2C4600AEDF8E /* ShWhich.swift */,
+				7502BEC0207B2F2E00AEDF8E /* Shell.swift */,
+			);
+			path = ShellCommand;
+			sourceTree = "<group>";
+		};
 		7516C2602068822900A82A7A /* Element */ = {
 			isa = PBXGroup;
 			children = (
 				7516C2612068822900A82A7A /* ElementViewModelProtocol.swift */,
 				7516C2632068842300A82A7A /* ChooseFileViewModel.swift */,
 				7580C9F6206D37F200738616 /* ListSelectedViewModel.swift */,
+				75F3B7CB2075C51B00E0DEF5 /* InputViewModel.swift */,
+				75F3B7D62077789700E0DEF5 /* RadioSelectedViewModel.swift */,
+				75F3B7DC2077A12D00E0DEF5 /* ParametersViewModel.swift */,
 			);
 			path = Element;
 			sourceTree = "<group>";
@@ -190,10 +235,19 @@
 		753AFCEC20634F21001CB5B4 /* Element */ = {
 			isa = PBXGroup;
 			children = (
+				75F3B7CD2075E2ED00E0DEF5 /* ElementViewProtocol.swift */,
 				753AFCED20634F21001CB5B4 /* ChooseFileView.xib */,
 				753AFCEE20634F21001CB5B4 /* ChooseFileView.swift */,
 				7516C2652069351600A82A7A /* ListSelectedView.swift */,
 				7516C2672069352700A82A7A /* ListSelectedView.xib */,
+				759CC6332071BCB200DC54BD /* InputView.swift */,
+				759CC6352071BCBF00DC54BD /* InputView.xib */,
+				75F3B7D22075E4DD00E0DEF5 /* RadioSelectedView.swift */,
+				75F3B7D42075E50100E0DEF5 /* RadioSelectedView.xib */,
+				75F3B7D82077A0A400E0DEF5 /* ParametersView.swift */,
+				75F3B7DA2077A0C200E0DEF5 /* ParametersView.xib */,
+				75F3B7DE2078FB8100E0DEF5 /* OutputView.swift */,
+				75F3B7E02078FB9A00E0DEF5 /* OutputView.xib */,
 			);
 			path = Element;
 			sourceTree = "<group>";
@@ -222,6 +276,8 @@
 				753AFD0120638284001CB5B4 /* XibLoadable.swift */,
 				753AFD0220638284001CB5B4 /* StoreService.swift */,
 				753AFD0320638284001CB5B4 /* BingoFileService.swift */,
+				75CCF1FF2079FA3400840E18 /* ShellService.swift */,
+				7502BEBB207B29ED00AEDF8E /* ShellCommand */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -439,12 +495,16 @@
 				758D26261F5FFC75003D37B7 /* request.mustache in Resources */,
 				7516C2682069352700A82A7A /* ListSelectedView.xib in Resources */,
 				758D26221F5FFA76003D37B7 /* document.mustache in Resources */,
+				759CC6362071BCBF00DC54BD /* InputView.xib in Resources */,
+				75F3B7E12078FB9A00E0DEF5 /* OutputView.xib in Resources */,
+				75F3B7DB2077A0C200E0DEF5 /* ParametersView.xib in Resources */,
 				758D25FA1F5F8ED8003D37B7 /* Assets.xcassets in Resources */,
 				752DF4051F617DBC004E334E /* subpod.mustache in Resources */,
 				758D26241F5FFC68003D37B7 /* wing.mustache in Resources */,
 				753AFCF120634F21001CB5B4 /* ChooseFileView.xib in Resources */,
 				758D26281F5FFC97003D37B7 /* mockPlist.mustache in Resources */,
 				758D25FD1F5F8ED8003D37B7 /* Main.storyboard in Resources */,
+				75F3B7D52075E50100E0DEF5 /* RadioSelectedView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -554,6 +614,7 @@
 				"${BUILT_PRODUCTS_DIR}/GRMustache.swift/Mustache.framework",
 				"${BUILT_PRODUCTS_DIR}/ITProgressBar/ITProgressBar.framework",
 				"${BUILT_PRODUCTS_DIR}/PathKit/PathKit.framework",
+				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
@@ -567,6 +628,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Mustache.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ITProgressBar.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PathKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
@@ -588,7 +650,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				753AFD0620638284001CB5B4 /* OpenPanelService.swift in Sources */,
+				759CC6342071BCB200DC54BD /* InputView.swift in Sources */,
 				758D261A1F5FC2BD003D37B7 /* BuilderViewModel.swift in Sources */,
+				75F3B7D32075E4DD00E0DEF5 /* RadioSelectedView.swift in Sources */,
 				753AFCFC20637F41001CB5B4 /* NSObjectDispose.swift in Sources */,
 				753AFCF420634F53001CB5B4 /* BGScrollView.swift in Sources */,
 				758D261E1F5FE4E1003D37B7 /* FileService.swift in Sources */,
@@ -597,6 +661,7 @@
 				7516C25D2067C20400A82A7A /* ElementFactoryViewModel.swift in Sources */,
 				75A94C012060ED8C00A6B814 /* LoadingConfigViewController.swift in Sources */,
 				7516C2662069351700A82A7A /* ListSelectedView.swift in Sources */,
+				75F3B7CC2075C51B00E0DEF5 /* InputViewModel.swift in Sources */,
 				756BE4411F60DE0B00825123 /* ParamView.swift in Sources */,
 				758D25F61F5F8ED8003D37B7 /* ViewController.swift in Sources */,
 				758D25F41F5F8ED8003D37B7 /* AppDelegate.swift in Sources */,
@@ -606,16 +671,25 @@
 				75A94BFD2060DD0100A6B814 /* MainCanvasViewController.swift in Sources */,
 				756BE4451F60DF7500825123 /* ParamEntity.swift in Sources */,
 				7516C2622068822900A82A7A /* ElementViewModelProtocol.swift in Sources */,
+				75F3B7CE2075E2ED00E0DEF5 /* ElementViewProtocol.swift in Sources */,
 				753AFD0520638284001CB5B4 /* AlertService.swift in Sources */,
 				758D25F81F5F8ED8003D37B7 /* Document.swift in Sources */,
 				753AFCEF20634F21001CB5B4 /* BGClipView.swift in Sources */,
+				75CCF2002079FA3400840E18 /* ShellService.swift in Sources */,
+				7502BEBF207B2E1200AEDF8E /* ShellExecutableProtocol.swift in Sources */,
 				753AFD0B20638436001CB5B4 /* YamlDataService.swift in Sources */,
+				75F3B7DD2077A12D00E0DEF5 /* ParametersViewModel.swift in Sources */,
 				7580C9F7206D37F200738616 /* ListSelectedViewModel.swift in Sources */,
+				7502BEBD207B2C4600AEDF8E /* ShWhich.swift in Sources */,
 				753AFCF220634F21001CB5B4 /* ChooseFileView.swift in Sources */,
 				753AFCF020634F21001CB5B4 /* BGView.swift in Sources */,
 				758D261C1F5FC3D6003D37B7 /* BuilderEntity.swift in Sources */,
+				75F3B7D72077789700E0DEF5 /* RadioSelectedViewModel.swift in Sources */,
 				753AFD0920638284001CB5B4 /* BingoFileService.swift in Sources */,
 				753AFD0420638284001CB5B4 /* YamlLoadedService.swift in Sources */,
+				75F3B7DF2078FB8100E0DEF5 /* OutputView.swift in Sources */,
+				7502BEC1207B2F2E00AEDF8E /* Shell.swift in Sources */,
+				75F3B7D92077A0A400E0DEF5 /* ParametersView.swift in Sources */,
 				758D26201F5FF81C003D37B7 /* FileRenderService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -753,6 +827,7 @@
 				DEVELOPMENT_TEAM = RU85R33KSG;
 				INFOPLIST_FILE = MogoAirport/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lookoneey.MogoAirport;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "MogoAirport/MogoAirport-Bridging-Header.h";
@@ -772,6 +847,7 @@
 				DEVELOPMENT_TEAM = RU85R33KSG;
 				INFOPLIST_FILE = MogoAirport/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lookoneey.MogoAirport;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "MogoAirport/MogoAirport-Bridging-Header.h";

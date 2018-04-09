@@ -8,16 +8,14 @@
 
 import Foundation
 
-enum ParamType
-{
-    case intType
-    case stringType
-    case dictionaryType
-    case arrayType
+public enum ParamType: String {
+    case intType = "Int"
+    case stringType = "String"
+    case dictionaryType = "[String: Any]"
+    case arrayType = "[Any]"
 }
 
-struct ParamEntity
-{
+public struct ParamEntity {
     var name: String
     var type: ParamType
 }

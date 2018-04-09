@@ -7,9 +7,26 @@
 //
 
 import Cocoa
+import RxSwift
+import RxCocoa
 
-public protocol ElementViewModelProtocol {
+public protocol ElementViewModelProtocol: NSObjectProtocol {
     
     var uiItem: UIConfigerItem { get set }
     init(_ configer: UIConfigerItem)
+}
+
+extension Reactive where Base: ElementViewModelProtocol {
+     
+    public var stringValue: Binder<String> {
+        return Binder(base, binding: { (base, confValue) in
+            base.uiItem.value = confValue
+        })
+    }
+    
+    public var mapValue: Binder<[String: Any]> {
+        return Binder(base, binding: { (base, value) in
+            base.uiItem.value = value
+        })
+    }
 }

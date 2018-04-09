@@ -9,20 +9,10 @@
 import Cocoa
 import RxSwift
 
-class ParamView: NSView {
+class ParamView: BGView, XibLoadable {
     
     var paramEntity = ParamEntity(name: "param", type: .intType)
-    
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-    }
-    
-    deinit {
-        NSLog("ParamView deinit")
-    }
-    
-    var closeSubject = PublishSubject<Void>()
-    var disposeBag = DisposeBag()
+    public var closeSubject = PublishSubject<Void>()
     
     @IBOutlet weak var nameTextField: NSTextField! {
         didSet {

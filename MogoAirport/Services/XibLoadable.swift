@@ -7,6 +7,7 @@
 //
 
 import Cocoa
+import SnapKit
 
 public protocol XibLoadable: NSObjectProtocol {
     
@@ -47,5 +48,22 @@ extension XibLoadable {
     
     public static func setup(_ view: Self) {
         
+    }
+}
+
+extension NSView {
+    
+    /// 给当前 view 添加一个 subview, 该 subview 从 xib 初始化而来
+    /// 该 subview 讲撑满他的 super view
+    ///
+    /// - Parameter view: xib view 的类型
+    /// - Returns: xib view 的实例
+    public func addedSubviewForClass<T>(_ viewClass: T.Type) -> T where T: NSView, T: XibLoadable {
+        let subView: T = viewClass.generateView()
+        addSubview(subView)
+        subView.snp.makeConstraints { (make) in
+            make.edges.equalToSuperview()
+        }
+        return subView
     }
 }

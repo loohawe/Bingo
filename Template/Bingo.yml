@@ -12,13 +12,13 @@
       Name: 工程目录
 
     - Type: Input
-      Key: hat_name
+      Key: path
       Value: ~
       Candidate: ~
       Name: 帽子名称
 
     - Type: Radio
-      Key: hat_name
+      Key: method
       Value: ~
       Candidate: 
         - aRadio
@@ -26,28 +26,22 @@
         - cRadio
         - dRadio
         - eRadio
-      Name: 帽子名称
+      Name: 请求方式
 
     - Type: List
-      Key: hat_name
+      Key: parents
       Value: ~
       Candidate: 
-        - aItem
-        - bItem
-        - cItem
-      Name: 帽子名称
+        - MarioRequest
+        - MGReques
+        - NakedMarioRequest
+      Name: 请求类型
 
     - Type: Param
-      Key: hat_name
+      Key: params
       Value: ~
       Candidate: ~
-      Name: 帽子名称
-
-    - Type: Opuput
-      Key: hat_name
-      Value: ~
-      Candidate: ~
-      Name: 帽子名称
+      Name: 参数
 
 
 - Project: 房东

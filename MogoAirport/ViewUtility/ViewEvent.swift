@@ -9,10 +9,9 @@
 import Foundation
 import Cocoa
 
-extension NSView
-{
-    func subviewsEnable(_ enable: Bool)
-    {
+extension NSView {
+    
+    func subviewsEnable(_ enable: Bool) {
         let viewEnumerator = subviews.enumerated()
         viewEnumerator.forEach { (_, itemView) in
             if let itemControl = itemView as? NSControl {
@@ -22,4 +21,18 @@ extension NSView
             itemView.display()
         }
     }
+    
+    var belongViewController: NSViewController? {
+        get {
+            var next = nextResponder
+            while nil != next {
+                if let vc = next as? NSViewController {
+                    return vc
+                }
+                next = next?.nextResponder
+            }
+            return nil
+        }
+    }
+    
 }
