@@ -14,10 +14,12 @@ class OpenPanelService {
     var panel: NSOpenPanel = NSOpenPanel()
     
     func openDirectory(_ handle: @escaping (URL) -> Void) {
+        panel.canChooseFiles = false
         openPanel(canChooseDirectories: true, handle)
     }
     
     func openFile(_ handle: @escaping (URL) -> Void) {
+        panel.canChooseFiles = true
         openPanel(canChooseDirectories: false, handle)
     }
     
@@ -25,11 +27,10 @@ class OpenPanelService {
         
         panel.allowsMultipleSelection = false
         panel.canChooseDirectories = canChooseDirectories
-        panel.canChooseFiles = true
-        panel.begin { [weak panel, weak self] (result) in
+        panel.begin { [weak panel] (result) in
             guard let `panel` = panel else { return }
             
-            if result.rawValue == NSFileHandlingPanelOKButton {
+            if result.rawValue == NSApplication.ModalResponse.OK.rawValue {
                 guard let location = panel.url else { return }
                 handle(location)
             }

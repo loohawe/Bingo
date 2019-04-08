@@ -56,7 +56,11 @@ public class ChooseFileView: BGView {
 extension ChooseFileView: ElementViewProtocol {
     
     var value: Any? {
-        return try? filePath.value()
+        if let urlOp = try? filePath.value(),
+            let url = urlOp {
+            return url
+        }
+        return nil
     }
     
     func emptyValue() {

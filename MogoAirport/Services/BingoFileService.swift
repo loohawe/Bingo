@@ -48,3 +48,40 @@ class BingoFileService {
     }
     
 }
+
+extension String {
+    
+    /// 当路径中含有 .. 或 . 时, 计算出绝对路径地址
+    ///
+    /// - Parameter path: 当前的路径
+    /// - Returns: 全路径
+    public func absolutePath(withCurrentPath path: String) -> String {
+        
+        if !hasPrefix("./") && !hasPrefix("../") {
+            return self
+        }
+        
+        var hostComp = components(separatedBy: "/")
+        var currentPathComp = path.components(separatedBy: "/")
+        
+        for i in 0..<hostComp.count {
+            if hostComp[0] == "." {
+                hostComp.remove(at: 0)
+            } else if hostComp[0] == ".." {
+                if !currentPathComp.isEmpty {
+                    currentPathComp.remove(at: currentPathComp.count - 1)
+                }
+                hostComp.remove(at: 0)
+            } else {
+                break
+            }
+        }
+        
+        if currentPathComp.isEmpty {
+            currentPathComp.append("")
+        }
+        currentPathComp.append(contentsOf: hostComp)
+        
+        return currentPathComp.joined(separator: "/")
+    }
+}

@@ -92,21 +92,21 @@ public class YamlDataService {
     
     var template: [String] {
         guard let `projectIndex` = projectIndex else {
-            fatalError("获取数据前请先调用 selectProject(_:) 方法制定第几个工程")
+            fatalError("获取数据前请先调用 selectProject(_:) 方法指定第几个工程")
         }
         return getTemplate(at: projectIndex)
     }
     
     var output: String {
         guard let `projectIndex` = projectIndex else {
-            fatalError("获取数据前请先调用 selectProject(_:) 方法制定第几个工程")
+            fatalError("获取数据前请先调用 selectProject(_:) 方法指定第几个工程")
         }
         return getOutput(at: projectIndex)
     }
     
     var uiConfiger: [UIConfigerItem] {
         guard let `projectIndex` = projectIndex else {
-            fatalError("获取数据前请先调用 selectProject(_:) 方法制定第几个工程")
+            fatalError("获取数据前请先调用 selectProject(_:) 方法指定第几个工程")
         }
         return getUIConfigers(at: projectIndex)
     }

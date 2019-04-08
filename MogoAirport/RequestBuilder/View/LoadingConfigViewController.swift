@@ -10,9 +10,13 @@ import Cocoa
 import RxSwift
 import RxCocoa
 import SnapKit
+import Stencil
+import PathKit
 
 class LoadingConfigViewController: NSViewController {
+    
 
+    /// UI
     @IBOutlet weak var chooseButton: NSButton!
     @IBOutlet weak var configerContainerView: NSView! /// 
     @IBOutlet weak var projectContainerView: NSView! /// 选择工程 view 的 container
@@ -20,6 +24,14 @@ class LoadingConfigViewController: NSViewController {
     @IBOutlet weak var outputContainerView: BGView! /// 输出的 container
     private var outputView: OutputView!
     
+    @IBOutlet weak var rightPannelWidth: NSLayoutConstraint! /// 右边面板宽度
+    @IBOutlet weak var bottomPannelWidth: NSLayoutConstraint! /// 底部面板宽度
+    
+    @IBOutlet weak var bingoAction: NSLayoutConstraint!
+    
+    
+    
+    /// Data
     private var dataCenter: YamlDataService!
     private lazy var elementFactory: ElementFactoryViewModel = {
         let eleVM = ElementFactoryViewModel()
@@ -27,10 +39,9 @@ class LoadingConfigViewController: NSViewController {
         return eleVM
     }()
     
-    @IBOutlet weak var rightPannelWidth: NSLayoutConstraint! /// 右边面板宽度
-    @IBOutlet weak var bottomPannelWidth: NSLayoutConstraint! /// 底部面板宽度
+
     
-    @IBOutlet weak var bingoAction: NSLayoutConstraint!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -70,6 +81,41 @@ class LoadingConfigViewController: NSViewController {
     @IBAction func bingoAction(_ sender: NSButton) {
         let kv = elementFactory.keyValue
         print(kv)
+        
+        /// 存结果时要取的文件名
+        let environment = Environment()
+        let fileName = dataCenter.template
+            .map { (item) -> String in
+                if let render = try? environment.renderTemplate(string: item, context: kv) {
+                    if let url = URL(string: render) {
+                        return url.lastPathComponent
+                    }
+                    return render
+                }
+                return ""
+            }
+        
+        /// 原始的文件名
+        let originFileName = dataCenter
+        
+        let originFiles = dataCenter.template.map { (item) -> Path in
+            let path = item.absolutePath(withCurrentPath: StoreService().ymlFilePath!.path)
+            let pathPart = path.components(separatedBy: "/")
+            pathPart.dropLast()
+            let folderPath = pathPart.joined(separator: "/")
+            return Path.init(folderPath)
+        }
+        
+        let fsLoader = FileSystemLoader(paths: originFiles)
+        let env = Environment(loader: fsLoader)
+        fileName.forEach { (itemFile) in
+            let result = try? env.renderTemplate(name: itemFile, context: kv) ?? ""
+            print(result)
+        }
+    }
+    
+    @IBAction func resetAction(_ sender: NSButton) {
+        elementFactory.resetViews()
     }
     
     private func loadYmlFile(_ location: URL) {

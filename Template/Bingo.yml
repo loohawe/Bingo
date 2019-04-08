@@ -1,9 +1,9 @@
+---
 - Project: 租客
   Template:
-    - a.stencil
-    - b.stencil
-    - c.stencil
-  Output: /Users/luhao/Documents/Work/Modules/MogoAirport/Template
+    - "./source/{{path}}Request.swift"
+    - "./source/{{path}}Wings.swift"
+  Output: "{{project_path}}/BingoOutput"
   UI:
     - Type: SelectFile
       Key: project_path
@@ -82,3 +82,5 @@
       Value: ~
       Candidate: ~
       Name: 帽子名称
+
+...

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="jGA-0Y-lOj">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="jGA-0Y-lOj">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14109"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14490.70"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
-        <capability name="system font weights other than Regular or Bold" minToolsVersion="7.0"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -600,7 +600,7 @@
                                         <menuItem title="Show Sidebar" keyEquivalent="s" id="kIP-vf-haE">
                                             <modifierMask key="keyEquivalentModifierMask" control="YES" command="YES"/>
                                             <connections>
-                                                <action selector="toggleSourceList:" target="Ady-hI-5gd" id="iwa-gc-5KM"/>
+                                                <action selector="toggleSidebar:" target="Ady-hI-5gd" id="iwa-gc-5KM"/>
                                             </connections>
                                         </menuItem>
                                         <menuItem title="Enter Full Screen" keyEquivalent="f" id="4J7-dP-txa">
@@ -664,7 +664,7 @@
         <scene sceneID="R2V-B0-nI4">
             <objects>
                 <windowController storyboardIdentifier="Document Window Controller" id="jGA-0Y-lOj" sceneMemberID="viewController">
-                    <window key="window" title="Bingo" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="Ckk-yw-fiv">
+                    <window key="window" title="Bingo" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="Ckk-yw-fiv">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="850" height="730"/>
@@ -696,7 +696,7 @@
                                         </constraints>
                                     </customView>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="wgH-ru-HxY">
-                                        <rect key="frame" x="8" y="467" width="192" height="25"/>
+                                        <rect key="frame" x="7.5" y="468" width="193" height="23"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="192" id="YJN-gs-8cU"/>
                                             <constraint firstAttribute="height" constant="22" id="hTN-eN-Fcf"/>
@@ -716,7 +716,7 @@
                                         </connections>
                                     </containerView>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="1pH-lw-yFy">
-                                        <rect key="frame" x="557" y="462" width="75" height="32"/>
+                                        <rect key="frame" x="557" y="463" width="75" height="32"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="SIp-dv-o0q"/>
                                             <constraint firstAttribute="width" constant="63" id="xfd-Iq-oew"/>
@@ -729,6 +729,20 @@
                                             <action selector="bingoAction:" target="lux-uF-9LG" id="Pj0-Mi-yl1"/>
                                         </connections>
                                     </button>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="eRE-BD-cJc">
+                                        <rect key="frame" x="482" y="463" width="75" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="63" id="GGw-ic-KPx"/>
+                                            <constraint firstAttribute="height" constant="21" id="beZ-Ym-ZiY"/>
+                                        </constraints>
+                                        <buttonCell key="cell" type="push" title="Reset" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="afE-oY-bIa">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="resetAction:" target="lux-uF-9LG" id="mir-Cm-c1g"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="1pH-lw-yFy" secondAttribute="trailing" constant="23" id="3Dr-DZ-k9j"/>
@@ -736,6 +750,8 @@
                                     <constraint firstItem="noG-2o-Zs8" firstAttribute="top" secondItem="mOb-QH-rgd" secondAttribute="bottom" id="CFN-3h-HpX"/>
                                     <constraint firstAttribute="trailing" secondItem="noG-2o-Zs8" secondAttribute="trailing" id="LGs-qu-gCB"/>
                                     <constraint firstItem="mOb-QH-rgd" firstAttribute="leading" secondItem="x40-ZX-9qz" secondAttribute="leading" id="NbQ-ye-xFK"/>
+                                    <constraint firstItem="eRE-BD-cJc" firstAttribute="centerY" secondItem="1pH-lw-yFy" secondAttribute="centerY" id="PRK-UR-vL3"/>
+                                    <constraint firstItem="1pH-lw-yFy" firstAttribute="leading" secondItem="eRE-BD-cJc" secondAttribute="trailing" constant="12" id="Qe5-KF-KzF"/>
                                     <constraint firstAttribute="bottom" secondItem="noG-2o-Zs8" secondAttribute="bottom" id="S8U-VU-2ny"/>
                                     <constraint firstItem="wgH-ru-HxY" firstAttribute="leading" secondItem="x40-ZX-9qz" secondAttribute="leading" constant="8" id="Whj-q4-PAc"/>
                                     <constraint firstItem="1pH-lw-yFy" firstAttribute="centerY" secondItem="wgH-ru-HxY" secondAttribute="centerY" id="dR2-k0-WPc"/>
@@ -838,11 +854,11 @@
                                         </view>
                                     </subviews>
                                 </clipView>
-                                <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="18u-uj-IGw">
+                                <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="18u-uj-IGw">
                                     <rect key="frame" x="-100" y="-100" width="433" height="15"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
-                                <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="zex-6Z-tLZ">
+                                <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="zex-6Z-tLZ">
                                     <rect key="frame" x="433" y="1" width="16" height="588"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
@@ -971,7 +987,7 @@
                                 </constraints>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="冒子的名字, 使用动词" drawsBackground="YES" id="cLN-xg-MLd">
                                     <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
@@ -1024,7 +1040,7 @@
                                 </constraints>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="请求的 Path" drawsBackground="YES" id="pQI-6p-wT5">
                                     <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
@@ -1039,7 +1055,7 @@
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="8RD-at-8pV">
-                                <rect key="frame" x="334" y="232" width="100" height="25"/>
+                                <rect key="frame" x="333.5" y="233" width="101" height="23"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="949-6E-DN2"/>
                                     <constraint firstAttribute="height" constant="22" id="CXu-D0-inv"/>
@@ -1065,11 +1081,11 @@
                                     </subviews>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </clipView>
-                                <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="NdQ-TO-uA1">
+                                <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="NdQ-TO-uA1">
                                     <rect key="frame" x="-100" y="-100" width="303" height="16"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
-                                <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="MJT-JE-YAn">
+                                <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="MJT-JE-YAn">
                                     <rect key="frame" x="287" y="0.0" width="16" height="156"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
@@ -1117,7 +1133,7 @@
                                 </connections>
                             </button>
                             <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="oJz-dS-hgH">
-                                <rect key="frame" x="129" y="518" width="308" height="26"/>
+                                <rect key="frame" x="129" y="518" width="308" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="xhn-tV-n2u"/>
                                 </constraints>
@@ -1137,7 +1153,7 @@
                                 </connections>
                             </popUpButton>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ktT-b7-ZkS">
-                                <rect key="frame" x="20" y="232" width="100" height="25"/>
+                                <rect key="frame" x="19.5" y="233" width="101" height="23"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="5h7-sU-sFi"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="Cw5-lQ-elM"/>
@@ -1177,7 +1193,7 @@
                                 </constraints>
                                 <textFieldCell key="cell" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="ZeG-OD-ho9">
                                     <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
